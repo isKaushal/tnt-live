@@ -214,16 +214,16 @@ h1 {
 /* animation keyframes end */
 /* animate */
 
-@media screen and (min-width: 300px) {/*  for mobile*/
+@media screen and (min-width: 0px) {/*  for mobile*/
     #ani {
         position: absolute;
         width: 100vw;
-        height: 401rem;
+        height: 452rem;
     }
 
     #main {
         width: 100vw;
-        height: 401rem;
+        height: 452rem;
         position: absolute;
         overflow: hidden;
         z-index: -10;
@@ -667,12 +667,12 @@ h1 {
     #ani {
         position: absolute;
         width: 100vw;
-        height: 477rem;
+        height: 351rem;
     }
 
     #main {
         width: 100vw;
-        height: 477rem;
+        height: 351rem;
         position: absolute;
         overflow: hidden;
         z-index: -10;
@@ -969,7 +969,7 @@ h1 {
     }
 }
 
-@media screen and (min-width: 1580px) {/*  for mac*/
+@media screen and (min-width: 1580px) {/*  for mac or not*/
     #ani {
         position: absolute;
         width: 100vw;
@@ -1120,27 +1120,3 @@ h1 {
         backdrop-filter: blur(10px);
     }
 }
-
-
-
-.temp{
-    width: 100%;
-    height: 15rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-
-}
-.temp-inner{
-    width: 200px;
-    height: 200px;
-    background:linear-gradient(orange,orangered 70%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    transition: 50s;
-
-}
-

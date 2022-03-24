@@ -7,9 +7,14 @@ gsap.timeline({repeat:-1})
   .from('#mac1',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(5)"},'<')
   .from('#mac3',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(5)"},'<')
   .from('#mac4',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(5)"},'<')
+  .from('#logo-left',{delay:2,display:"flex"})
 
 
-
+  .from('#tab1',{y:22,duration:0.8,opacity:0,ease: "back.out(5)"})
+  .from('#tab2',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(5)"},'<')
+  .from('#tab3',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(5)"},'<')
+  .from('#tab4',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(5)"},'<')
+  .from('#logo-left2',{delay:2,display:"flex"})
 
 
 // FIRST IMAGE ANINATION END
@@ -135,46 +140,46 @@ document.addEventListener('scroll', () =>  {
 // form start 
 
 
-const contactform = document.getElementById('form')
+// const contactform = document.getElementById('form')
 
-let sender = document.getElementById('name');
-let email = document.getElementById('Email');
-let phone = document.getElementById('phone');
-let Profession = document.getElementById('select');
-let message = document.getElementById('message');
+// let sender = document.getElementById('name');
+// let email = document.getElementById('Email');
+// let phone = document.getElementById('phone');
+// let Profession = document.getElementById('select');
+// let message = document.getElementById('message');
 
 
-contactform.addEventListener('submit', (e)=>{
-  e.preventDefault(); 
+// contactform.addEventListener('submit', (e)=>{
+//   e.preventDefault(); 
 
-  let formData = {
-    sender: sender.value,
-    email: email.value,
-    phone:phone.value,
-    Profession : Profession.value,
-    message : message.value
-  }
+//   let formData = {
+//     sender :sender.value,
+//     email :email.value,
+//     phone :phone.value,
+//     Profession :Profession.value,
+//     message :message.value
+//   }
 
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET' , 'POST','/');
-  xhr.setRequestHeader('content-type','application/json');
-  xhr.onload = function() {
-     console.log(xhr.responseText);
-     if(xhr.responseText == 'success'){
-       alert('Query sent successfully');
-       sender.value = '';
-       email.value = '';
-       phone.value = '';
-       Profession.value = '';
-       message.value = '';
-     }else{
-       alert('Something Went Wrong')
-     }
-    }
+//   let xhr = new XMLHttpRequest();
+//   xhr.open('GET' , 'POST','/');
+//   xhr.setRequestHeader('content-type','application/json');
+//   xhr.onload = function() {
+//     console.log(xhr.responseText);
+//     if(xhr.responseText == 'success'){
+//       alert('Query sent successfully');
+//       sender.value = '';
+//       email.value = '';
+//       phone.value = '';
+//       Profession.value = '';
+//       message.value = '';
+//     }else{
+//       alert('Something Went Wrong')
+//     }
+//   }
 
-    xhr.send(JSON.stringify(formData));
+//   xhr.send(JSON.stringify(formData));
     
-  });
+// });
 
 
 // featurs animation
@@ -220,16 +225,4 @@ gsap.timeline({repeat:-1,delay:5})
 
 //  By gsap
 
-
-let size = document.getElementById("price");
-
-
-size.addEventListener("click",()=>{
- 
-  if(size.style.width = "12rem"){
-    size.style.width = "20rem";
-  }else{
-    size.remove.style.width = "0rem";
-  }
- 
-});
+// footer animation
