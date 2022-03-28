@@ -18,14 +18,15 @@ gsap.timeline({repeat:-1})
 
 
 // FIRST IMAGE ANINATION END
+
 // IS IN VIEW PORT FUNCTON START
+
   
 const Box = document.getElementById("box");
 const Boxes = document.getElementById("boxes");
 const My = document.getElementById("animation");
 const circle = document.getElementById("amimate_circle");
 const mobile = document.getElementById("mobile-inner");
-
 
 
 function isInViewport(element) {
@@ -137,51 +138,6 @@ document.addEventListener('scroll', () =>  {
 });
 
 // IS IN VIEW PORT FUNCTON END
-// form start 
-
-
-// const contactform = document.getElementById('form')
-
-// let sender = document.getElementById('name');
-// let email = document.getElementById('Email');
-// let phone = document.getElementById('phone');
-// let Profession = document.getElementById('select');
-// let message = document.getElementById('message');
-
-
-// contactform.addEventListener('submit', (e)=>{
-//   e.preventDefault(); 
-
-//   let formData = {
-//     sender :sender.value,
-//     email :email.value,
-//     phone :phone.value,
-//     Profession :Profession.value,
-//     message :message.value
-//   }
-
-//   let xhr = new XMLHttpRequest();
-//   xhr.open('GET' , 'POST','/');
-//   xhr.setRequestHeader('content-type','application/json');
-//   xhr.onload = function() {
-//     console.log(xhr.responseText);
-//     if(xhr.responseText == 'success'){
-//       alert('Query sent successfully');
-//       sender.value = '';
-//       email.value = '';
-//       phone.value = '';
-//       Profession.value = '';
-//       message.value = '';
-//     }else{
-//       alert('Something Went Wrong')
-//     }
-//   }
-
-//   xhr.send(JSON.stringify(formData));
-    
-// });
-
-
 // featurs animation
 
 gsap.timeline()
@@ -223,6 +179,142 @@ gsap.timeline({repeat:-1,delay:5})
   .from('#paragraph6',{x:-0,duration:1.5,opacity:1},'<')
   .from('#changer6',{display:"flex"})
 
-//  By gsap
 
-// footer animation
+// node mailer start
+// const contactform = document.getElementById('form')
+
+// let sender = document.getElementById('name');
+// let email = document.getElementById('Email');
+// let phone = document.getElementById('phone');
+// let Profession = document.getElementById('select');
+// let message = document.getElementById('message');
+
+
+// contactform.addEventListener('submit', (e)=>{
+//   e.preventDefault(); 
+
+//   let formData = {
+//     sender :sender.value,
+//     email :email.value,
+//     phone :phone.value,
+//     Profession :Profession.value,
+//     message :message.value
+//   }
+
+//   let xhr = new XMLHttpRequest();
+//   xhr.open('GET' , 'POST','/');
+//   xhr.setRequestHeader('content-type','application/json');
+//   xhr.onload = function() {
+//     console.log(xhr.responseText);
+//     if(xhr.responseText == 'success'){
+//       alert('Query sent successfully');
+//       sender.value = '';
+//       email.value = '';
+//       phone.value = '';
+//       Profession.value = '';
+//       message.value = '';
+//     }else{
+//       alert('Something Went Wrong')
+//     }
+//   }
+
+//   xhr.send(JSON.stringify(formData));
+    
+// });
+// node mailer end
+
+// PERCENTAGE SCROLL TRIGGER
+
+// FIRST 80% CIRCLE
+let section1 = document.getElementById("section1");
+gsap.registerPlugin(ScrollTrigger)
+
+gsap.timeline({
+  scrollTrigger:{
+    trigger:section1,
+    markers: "true",
+
+  }
+})
+.from("#section1",{y :300,opacity:1, duration:1 });
+
+// FIRST 70% CIRCLE
+
+let section2 = document.getElementById("section2");
+gsap.registerPlugin(ScrollTrigger)
+
+
+gsap.timeline({
+  scrollTrigger:{
+    trigger:section2,
+    markers: "true",
+
+  }
+})
+.from("#section2",{y :300,opacity:1, duration:1, delay:0.5 });
+
+// FIRST 65% CIRCLE
+
+let section3 = document.getElementById("section3");
+gsap.registerPlugin(ScrollTrigger)
+
+
+gsap.timeline({
+  scrollTrigger:{
+    trigger:section3,
+    toggleActions:"restart none none none",
+    markers:"true",
+
+  }
+})
+
+.from("#section3",{y :300,opacity:1, duration:1, delay:1 });
+
+// PERCENTAGE SCROLL TRIGGER
+             
+                
+// percentage animation
+let num1 = document.getElementById("percentage-number1");
+let counter1 = 0;
+
+setInterval(()=>{
+  
+  if( counter1 == 80){
+    clearInterval();
+  }else{
+    counter1 += 1;
+    num1.innerHTML = counter1 + "%";
+  }
+  
+},62);
+
+
+let num2 = document.getElementById("percentage-number2");
+let counter2 = 0;
+
+setInterval(()=>{
+  
+  if( counter2 == 70){
+    clearInterval();
+  }else{
+    counter2 += 1;
+    num2.innerHTML = counter2 + "%";
+  }
+  
+},60);
+
+
+let num3 = document.getElementById("percentage-number3");
+let counter3 = 0;
+
+setInterval(()=>{
+
+  if( counter3 == 65){
+    clearInterval();
+  }else{
+    counter3 += 1;
+    num3.innerHTML = counter3 + "%";
+  }
+
+},76);
+
