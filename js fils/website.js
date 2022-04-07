@@ -1,42 +1,50 @@
+// ------------------------background theme caller---------------------------//
+ 
+let nav = document.getElementById("main");
 
-// FIRST IMAGE ANINATION START
+fetch('other_html/bg.html')
+.then(res=>res.text())
+.then(data=>{
+  nav.innerHTML=data
+})
+
+// ------------------------background theme caller---------------------------//
+// ------------------------FIRST IMAGE ANINATION START---------------------------//
+
 
 gsap.timeline({repeat:-1})
 
-  .from('#mac2',{y:22,duration:0.8,opacity:0,ease: "back.out(5)"})
-  .from('#mac1',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(5)"},'<')
-  .from('#mac3',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(5)"},'<')
-  .from('#mac4',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(5)"},'<')
+  .from('#mac2',{y:22,duration:0.8,opacity:0})
+  .from('#mac1',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(2)"},'<')
+  .from('#mac3',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(2)"},'<')
+  .from('#mac4',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(2)"},'<')
   .from('#logo-left',{delay:2,display:"flex"})
 
 
-  .from('#tab1',{y:22,duration:0.8,opacity:0,ease: "back.out(5)"})
-  .from('#tab2',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(5)"},'<')
-  .from('#tab3',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(5)"},'<')
-  .from('#tab4',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(5)"},'<')
+  .from('#tab1',{y:22,duration:0.8,opacity:0})
+  .from('#tab2',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(2)"},'<')
+  .from('#tab3',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(2)"},'<')
+  .from('#tab4',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(2)"},'<')
   .from('#logo-left2',{delay:2,display:"flex"})
 
+//---------------------------------- FIRST IMAGE ANINATION END------------------------------------//
+//---------------------------------- IS IN VIEW PORT FUNCTON START------------------------------------//
 
-// FIRST IMAGE ANINATION END
-
-// IS IN VIEW PORT FUNCTON START
-
-  
 const Box = document.getElementById("box");
 const Boxes = document.getElementById("boxes");
 const My = document.getElementById("animation");
 const circle = document.getElementById("amimate_circle");
-const mobile = document.getElementById("mobile-inner");
+const Percentage = document.getElementById("percentage-number-container");
 
 
 function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+  const rect = element.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 }
 
 document.addEventListener('scroll', () =>  {
@@ -47,17 +55,17 @@ document.addEventListener('scroll', () =>  {
 
 
   if(isVisible) {
-      if (!circle.hasChildNodes()) {
-          circle.insertAdjacentHTML("afterbegin", `
-          <div class="animation-wrap" id="animation-wrap">
-              <div class="animation" id="animation">
-                  <div class="matrial" id="matrial">
-                      <img src="/images/1.png" alt="">
-                  </div>
-              </div> 
-          </div>
-          `)
-      }
+    if (!circle.hasChildNodes()) {
+      circle.insertAdjacentHTML("afterbegin", `
+      <div class="animation-wrap" id="animation-wrap">
+          <div class="animation" id="animation">
+              <div class="matrial" id="matrial">
+                  <img src="/images/1.png" alt="">
+              </div>
+          </div> 
+      </div>
+      `)
+    }
   }
 
   if(Visible) {
@@ -72,10 +80,10 @@ document.addEventListener('scroll', () =>  {
      }
   }  
 
-  if( IsVisible) {
+  if(IsVisible) {
     if (!Box.hasChildNodes()) {
       Box.insertAdjacentHTML("afterbegin",`
-          <div class="box-wrap1">
+        <div class="box-wrap1">
           <div class="box">
             <i class="fas fa-bolt"></i>
             <H2> Question Bank</H2>
@@ -107,7 +115,7 @@ document.addEventListener('scroll', () =>  {
   if(Have) {
     if (!Boxes.hasChildNodes()) {
       Boxes.insertAdjacentHTML("afterbegin",`
-          <div class="box-wrap4">
+        <div class="box-wrap4">
           <div class="box">
             <i class="fas fa-cog"></i>
             <h2>Adaptive practice</h2>
@@ -131,25 +139,27 @@ document.addEventListener('scroll', () =>  {
         </div>
     `)
    }
- }  
- 
+  } 
+
 },{
     passive: true
 });
 
-// IS IN VIEW PORT FUNCTON END
-// featurs animation
+// ------------------------IS IN VIEW PORT FUNCTON END--------------------//
+//------------------------ FEATURS ANINMATION ---------------------//
+let toggle = document.getElementById("toggle");
 
-gsap.timeline()
+gsap.registerPlugin(ScrollTrigger)
+const tl = gsap.timeline({
+  repeat:-1,
+  scrollTrigger:{
+    trigger:toggle,
+    markers: "true",
+  }
+});
 
-
-  .from('#image1',{x:200,duration:1.5,opacity:0})
-  .from('#image1',{delay:2,x:-0,duration:1.5,opacity:1})
-  .from('#changer1',{display:"flex"})
-
-gsap.timeline({repeat:-1,delay:5})
-
-  .from('#image2',{x:-100,duration:2,opacity:0})
+// gsap.timeline({repeat:-1,delay:5})
+tl.from('#image2',{x:-100,duration:2,opacity:0})
   .from('#paragraph2',{x:100,duration:2,opacity:0},'<')
   .from('#image2',{x:0,delay:6,duration:1.5,opacity:1})
   .from('#paragraph2',{x:-0,duration:1.5,opacity:1},'<')
@@ -180,7 +190,241 @@ gsap.timeline({repeat:-1,delay:5})
   .from('#changer6',{display:"flex"})
 
 
-// node mailer start
+
+// --------------------------PERCENTAGE SCROLL TRIGGER--------------------------//
+
+// --------------------------FIRST 80% CIRCLE-----------------------------------//
+
+let section1 = document.getElementById("section1");
+let offset1 = document.getElementById("offset1");
+let percentage1 = document.getElementById("percentage-number1")
+
+gsap.registerPlugin(ScrollTrigger)
+gsap.timeline({
+  scrollTrigger:{
+    trigger:section1,
+    trigger:offset1,
+    trigger:percentage1,
+    markers: "true",
+
+  }
+})
+  .from("#section1",{y :50, duration:1,opacity:0})
+  .from("#offset1", {strokeDasharray:20,duration:5},"<")
+  .to("#offset1", {strokeDashoffset:170,duration:4},"<")
+
+// -------------------------------FIRST 70% CIRCLE---------------------------//
+
+let section2 = document.getElementById("section2");
+let offset2 = document.getElementById("offset2");
+let percentage2 = document.getElementById("percentage-number2");
+
+gsap.registerPlugin(ScrollTrigger)
+gsap.timeline({
+  scrollTrigger:{
+    trigger:section2,
+    trigger:offset2,
+    trigger:percentage2,
+    markers: "true",
+
+  }
+})
+  .from("#section2",{y :50, duration:1,opacity:0})
+  .from("#offset2", {strokeDasharray:20,duration:5},"<")
+  .to("#offset2", {strokeDashoffset:190,duration:4},"<")  
+
+// -------------------------------FIRST 65% CIRCLE---------------------------//
+
+let section3 = document.getElementById("section3");
+let offset3 = document.getElementById("offset3");
+let percentage3 = document.getElementById("percentage-number3");
+
+gsap.registerPlugin(ScrollTrigger)
+gsap.timeline({
+  scrollTrigger:{
+    trigger:section3,
+    trigger:offset3,
+    trigger:percentage3,
+    markers: "true",
+
+  }
+})
+  .from("#section3",{y :50, duration:1,opacity:0 })
+  .from("#offset3", {strokeDasharray:20,duration:5},"<")
+  .to("#offset3", {strokeDashoffset:220,duration:4},"<") 
+
+// --------------------------PERCENTAGE SCROLL TRIGGER--------------------------//
+
+// percentage counter animation
+
+
+var a = 0;
+
+$(window).scroll(function() {
+  var oTop = $('#counter').offset().top - window.innerHeight;
+  
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('.percentage-number').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+        countNum: countTo
+      }, {
+        duration: 5500,
+        easing: 'swing',
+        step: function() {
+          $this.text(Math.floor(this.countNum));
+        },
+        complete: function() {
+          $this.text(this.countNum);
+          // alert('complete');
+        }
+      });
+    });
+    a = 1;
+  }
+});
+
+// let loding = document.getElementById("preloder-container-wrap")
+ 
+// function load() {
+//   setTimeout(() => {
+//     loding.style.opacity = 0;
+//   },2000);
+//   setTimeout(() => {
+//     loding.style.display = "none";
+//   },4000);
+// }
+
+
+let arrowBox1  = document.getElementById("Most-asked-questions-box-container1")
+let innerBox1 = document.getElementById("Most-asked-questions-box-paragraph1")
+let arrowBtn1 = document.getElementById("arrowbtn1")
+let Expand1 = true;
+
+function Arrow1() {
+  if(Expand1) {
+    console.log("hello");
+    arrowBox1.style.height = '15rem';
+    innerBox1.style.height = '11rem';
+    Expand1 = false;  
+    $(".rotate").click(function(){
+      $(this).toggleClass("down");  
+    });
+  }else{
+    console.log("bye");
+    arrowBox1.style.height = '4rem';
+    innerBox1.style.height = '0rem';
+    Expand1 = true;
+    $(".rotate").click(function(){
+      $(this).toggleClass("up");  
+    });
+  }
+}
+ 
+
+
+let arrowBox2  = document.getElementById("Most-asked-questions-box-container2")
+let innerBox2 = document.getElementById("Most-asked-questions-box-paragraph2")
+let arrowBtn2 = document.getElementById("arrowbtn2")
+let Expand2 = true;
+
+function Arrow2() {
+  if(Expand2) {
+    console.log("hello");
+    arrowBox2.style.height = '15rem';
+    innerBox2.style.height = '11rem';
+    arrowBtn2.style.rotate = '180deg';
+    Expand2 = false;
+  }else{
+    console.log("bye");
+    arrowBox2.style.height = '4rem';
+    innerBox2.style.height = '0rem';
+    arrowBtn2.style.rotate = '0deg';
+    Expand2 = true;
+  }
+}
+
+let arrowBox3  = document.getElementById("Most-asked-questions-box-container3")
+let innerBox3 = document.getElementById("Most-asked-questions-box-paragraph3")
+let arrowBtn3 = document.getElementById("arrowbtn3")
+let Expand3 = true;
+
+function Arrow3() {
+  if(Expand3) {
+    console.log("hello");
+    arrowBox3.style.height = '15rem';
+    innerBox3.style.height = '11rem';
+    arrowBtn3.style.rotate = '180deg';
+    Expand3 = false;
+  }else{
+    console.log("bye");
+    arrowBox3.style.height = '4rem';
+    innerBox3.style.height = '0rem';
+    arrowBtn3.style.rotate = '0deg';
+    Expand3 = true;
+  }
+}
+
+let arrowBox4  = document.getElementById("Most-asked-questions-box-container4")
+let innerBox4 = document.getElementById("Most-asked-questions-box-paragraph4")
+let arrowBtn4 = document.getElementById("arrowbtn4")
+let Expand4 = true;
+
+function Arrow4() {
+  if(Expand4) {
+    console.log("hello");
+    arrowBox4.style.height = '15rem';
+    innerBox4.style.height = '11rem';
+    arrowBtn4.style.rotate = '180deg';
+    Expand4 = false;
+  }else{
+    console.log("bye");
+    arrowBox4.style.height = '4rem';
+    innerBox4.style.height = '0rem';
+    arrowBtn4.style.rotate = '0deg';
+    Expand4 = true;
+  }
+}
+
+
+
+// let demo1 = document.getElementById("demo1")
+// let demo2 = document.getElementById("demo2")
+// let demo3 = document.getElementById("demo3")
+// let changer = document.getElementById("changer")
+// let isExpanded = false;
+
+// function resizer() {
+  
+//   if(!isExpanded){
+//     newFunction();
+//     isExpanded = true;
+//   }else{
+//     newFunction_1();
+//     isExpanded = false;    
+//   }
+  
+
+//   function newFunction_1() {
+//     demo2.style.height = '20%';
+//     demo3.style.height = '0%';
+//   }
+
+//   function newFunction() {
+//     demo2.style.height = '60%';
+//     demo3.style.height = '50%';
+//   }
+// }
+  
+
+
+
+
+
+// // node mailer start
 // const contactform = document.getElementById('form')
 
 // let sender = document.getElementById('name');
@@ -221,100 +465,7 @@ gsap.timeline({repeat:-1,delay:5})
 //   xhr.send(JSON.stringify(formData));
     
 // });
-// node mailer end
+// // node mailer end
+ 
 
-// PERCENTAGE SCROLL TRIGGER
-
-// FIRST 80% CIRCLE
-let section1 = document.getElementById("section1");
-gsap.registerPlugin(ScrollTrigger)
-
-gsap.timeline({
-  scrollTrigger:{
-    trigger:section1,
-    markers: "true",
-
-  }
-})
-.from("#section1",{y :300,opacity:1, duration:1 });
-
-// FIRST 70% CIRCLE
-
-let section2 = document.getElementById("section2");
-gsap.registerPlugin(ScrollTrigger)
-
-
-gsap.timeline({
-  scrollTrigger:{
-    trigger:section2,
-    markers: "true",
-
-  }
-})
-.from("#section2",{y :300,opacity:1, duration:1, delay:0.5 });
-
-// FIRST 65% CIRCLE
-
-let section3 = document.getElementById("section3");
-gsap.registerPlugin(ScrollTrigger)
-
-
-gsap.timeline({
-  scrollTrigger:{
-    trigger:section3,
-    toggleActions:"restart none none none",
-    markers:"true",
-
-  }
-})
-
-.from("#section3",{y :300,opacity:1, duration:1, delay:1 });
-
-// PERCENTAGE SCROLL TRIGGER
-             
-                
-// percentage animation
-let num1 = document.getElementById("percentage-number1");
-let counter1 = 0;
-
-setInterval(()=>{
-  
-  if( counter1 == 80){
-    clearInterval();
-  }else{
-    counter1 += 1;
-    num1.innerHTML = counter1 + "%";
-  }
-  
-},62);
-
-
-let num2 = document.getElementById("percentage-number2");
-let counter2 = 0;
-
-setInterval(()=>{
-  
-  if( counter2 == 70){
-    clearInterval();
-  }else{
-    counter2 += 1;
-    num2.innerHTML = counter2 + "%";
-  }
-  
-},60);
-
-
-let num3 = document.getElementById("percentage-number3");
-let counter3 = 0;
-
-setInterval(()=>{
-
-  if( counter3 == 65){
-    clearInterval();
-  }else{
-    counter3 += 1;
-    num3.innerHTML = counter3 + "%";
-  }
-
-},76);
 
