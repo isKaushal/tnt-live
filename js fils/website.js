@@ -209,7 +209,7 @@ gsap.timeline({
 
   }
 })
-  .from("#section1",{y :50, duration:1,opacity:0})
+  .from("#section1",{y :50, duration:1,opacity:0 ,delay :1.6})
   .from("#offset1", {strokeDasharray:20,duration:5},"<")
   .to("#offset1", {strokeDashoffset:170,duration:4},"<")
 
@@ -229,7 +229,7 @@ gsap.timeline({
 
   }
 })
-  .from("#section2",{y :50, duration:1,opacity:0})
+  .from("#section2",{y :50, duration:1,opacity:0,delay :0.8})
   .from("#offset2", {strokeDasharray:20,duration:5},"<")
   .to("#offset2", {strokeDashoffset:190,duration:4},"<")  
 
@@ -272,7 +272,7 @@ $(window).scroll(function() {
       }).animate({
         countNum: countTo
       }, {
-        duration: 5500,
+        duration: 6000,
         easing: 'swing',
         step: function() {
           $this.text(Math.floor(this.countNum));
@@ -299,94 +299,78 @@ $(window).scroll(function() {
 // }
 
 
-let arrowBox1  = document.getElementById("Most-asked-questions-box-container1")
-let innerBox1 = document.getElementById("Most-asked-questions-box-paragraph1")
-let arrowBtn1 = document.getElementById("arrowbtn1")
-let Expand1 = true;
+let arrowBoxList = [
+{
+  arrowBox: document.getElementById("Most-asked-questions-box-container1"),
+  innerBox:  document.getElementById("Most-asked-questions-box-paragraph1"),
+  arrowBtn:document.getElementById("arrowbtn1"),
+  isExpanded:true
+},
+{
+  arrowBox: document.getElementById("Most-asked-questions-box-container2"),
+  innerBox:  document.getElementById("Most-asked-questions-box-paragraph2"),
+  arrowBtn:document.getElementById("arrowbtn2"),
+  isExpanded:true
+},
+{
+  arrowBox: document.getElementById("Most-asked-questions-box-container3"),
+  innerBox:  document.getElementById("Most-asked-questions-box-paragraph3"),
+  arrowBtn:document.getElementById("arrowbtn3"),
+  isExpanded:true
+},
+{
+  arrowBox: document.getElementById("Most-asked-questions-box-container4"),
+  innerBox:  document.getElementById("Most-asked-questions-box-paragraph4"),
+  arrowBtn:document.getElementById("arrowbtn4"),
+  isExpanded:true
+},
+{
+  arrowBox: document.getElementById("Most-asked-questions-box-container5"),
+  innerBox:  document.getElementById("Most-asked-questions-box-paragraph5"),
+  arrowBtn:document.getElementById("arrowbtn5"),
+  isExpanded:true
+},
+{
+  arrowBox: document.getElementById("Most-asked-questions-box-container6"),
+  innerBox:  document.getElementById("Most-asked-questions-box-paragraph6"),
+  arrowBtn:document.getElementById("arrowbtn6"),
+  isExpanded:true
+},
+{
+  arrowBox: document.getElementById("Most-asked-questions-box-container7"),
+  innerBox:  document.getElementById("Most-asked-questions-box-paragraph7"),
+  arrowBtn:document.getElementById("arrowbtn7"),
+  isExpanded:true
+},
+{
+  arrowBox: document.getElementById("Most-asked-questions-box-container8"),
+  innerBox:  document.getElementById("Most-asked-questions-box-paragraph8"),
+  arrowBtn:document.getElementById("arrowbtn8"),
+  isExpanded:true
+}
+];
 
-function Arrow1() {
-  if(Expand1) {
-    console.log("hello");
-    arrowBox1.style.height = '15rem';
-    innerBox1.style.height = '11rem';
-    Expand1 = false;  
-    $(".rotate").click(function(){
-      $(this).toggleClass("down");  
-    });
+function ArrowClick(index){
+for(let i = 0;i < arrowBoxList.length;i++)
+{
+  if(i==index)
+  {
+    if(arrowBoxList[i].isExpanded) {
+      arrowBoxList[i].arrowBox.style.height = '15rem';
+      arrowBoxList[i].innerBox.style.height = '11rem';
+      arrowBoxList[i].isExpanded= false; 
+    }else{
+      arrowBoxList[i].arrowBox.style.height = '4rem';
+      arrowBoxList[i].innerBox.style.height = '0rem';
+      arrowBoxList[i].isExpanded = true; 
+     
+    }
   }else{
-    console.log("bye");
-    arrowBox1.style.height = '4rem';
-    innerBox1.style.height = '0rem';
-    Expand1 = true;
-    $(".rotate").click(function(){
-      $(this).toggleClass("up");  
-    });
+    arrowBoxList[i].arrowBox.style.height = '4rem';
+    arrowBoxList[i].innerBox.style.height = '0rem';
+    arrowBoxList[i].isExpanded = true; 
   }
 }
- 
-
-
-let arrowBox2  = document.getElementById("Most-asked-questions-box-container2")
-let innerBox2 = document.getElementById("Most-asked-questions-box-paragraph2")
-let arrowBtn2 = document.getElementById("arrowbtn2")
-let Expand2 = true;
-
-function Arrow2() {
-  if(Expand2) {
-    console.log("hello");
-    arrowBox2.style.height = '15rem';
-    innerBox2.style.height = '11rem';
-    arrowBtn2.style.rotate = '180deg';
-    Expand2 = false;
-  }else{
-    console.log("bye");
-    arrowBox2.style.height = '4rem';
-    innerBox2.style.height = '0rem';
-    arrowBtn2.style.rotate = '0deg';
-    Expand2 = true;
-  }
-}
-
-let arrowBox3  = document.getElementById("Most-asked-questions-box-container3")
-let innerBox3 = document.getElementById("Most-asked-questions-box-paragraph3")
-let arrowBtn3 = document.getElementById("arrowbtn3")
-let Expand3 = true;
-
-function Arrow3() {
-  if(Expand3) {
-    console.log("hello");
-    arrowBox3.style.height = '15rem';
-    innerBox3.style.height = '11rem';
-    arrowBtn3.style.rotate = '180deg';
-    Expand3 = false;
-  }else{
-    console.log("bye");
-    arrowBox3.style.height = '4rem';
-    innerBox3.style.height = '0rem';
-    arrowBtn3.style.rotate = '0deg';
-    Expand3 = true;
-  }
-}
-
-let arrowBox4  = document.getElementById("Most-asked-questions-box-container4")
-let innerBox4 = document.getElementById("Most-asked-questions-box-paragraph4")
-let arrowBtn4 = document.getElementById("arrowbtn4")
-let Expand4 = true;
-
-function Arrow4() {
-  if(Expand4) {
-    console.log("hello");
-    arrowBox4.style.height = '15rem';
-    innerBox4.style.height = '11rem';
-    arrowBtn4.style.rotate = '180deg';
-    Expand4 = false;
-  }else{
-    console.log("bye");
-    arrowBox4.style.height = '4rem';
-    innerBox4.style.height = '0rem';
-    arrowBtn4.style.rotate = '0deg';
-    Expand4 = true;
-  }
 }
 
 
@@ -419,53 +403,3 @@ function Arrow4() {
 //   }
 // }
   
-
-
-
-
-
-// // node mailer start
-// const contactform = document.getElementById('form')
-
-// let sender = document.getElementById('name');
-// let email = document.getElementById('Email');
-// let phone = document.getElementById('phone');
-// let Profession = document.getElementById('select');
-// let message = document.getElementById('message');
-
-
-// contactform.addEventListener('submit', (e)=>{
-//   e.preventDefault(); 
-
-//   let formData = {
-//     sender :sender.value,
-//     email :email.value,
-//     phone :phone.value,
-//     Profession :Profession.value,
-//     message :message.value
-//   }
-
-//   let xhr = new XMLHttpRequest();
-//   xhr.open('GET' , 'POST','/');
-//   xhr.setRequestHeader('content-type','application/json');
-//   xhr.onload = function() {
-//     console.log(xhr.responseText);
-//     if(xhr.responseText == 'success'){
-//       alert('Query sent successfully');
-//       sender.value = '';
-//       email.value = '';
-//       phone.value = '';
-//       Profession.value = '';
-//       message.value = '';
-//     }else{
-//       alert('Something Went Wrong')
-//     }
-//   }
-
-//   xhr.send(JSON.stringify(formData));
-    
-// });
-// // node mailer end
- 
-
-

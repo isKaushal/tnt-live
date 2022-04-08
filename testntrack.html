@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <link rel="icon" type="image/x-icon" href="/images/Testntrack_logo -----.png"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <link
@@ -42,26 +43,30 @@
     <!-- ------------------------------background theme end ---------------------------->
     <div class="content">
       <header>
-        <div class="logo-container">
-          <a href="testntrack.html">
-            <img src="/images/logo_01.png" alt="" />
-          </a>
-        </div>
-        <div class="icons">
-          <input id="check" type="checkbox" />
-          <label id="label" for="check">
-            <i id="bars" class="fa-solid fa-bars"></i>
-            <i id="cross" class="fa-solid fa-xmark"></i>
-          </label>
-          <ul>
-            <div class="margin">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Gallary</a></li>
-            </div>
-          </ul>
-        </div>
+        <!-- header for 300px to 800px only-->
+        <!-- <span-1> -->
+          <div class="logo-container">
+            <a href="testntrack.html">
+              <img src="/images/logo_01.png" alt="" />
+            </a>
+          </div>
+          <div class="icons">
+            <input id="check" type="checkbox" />
+            <label id="label" for="check">
+              <i id="bars" class="fa-solid fa-bars"></i>
+              <i id="cross" class="fa-solid fa-xmark"></i>
+            </label>
+            <ul>
+              <div class="margin">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Gallary</a></li>
+              </div>
+            </ul>
+          </div>
+        <!-- </span-1> -->
+        <!-- header for 300px to 800px only-->
       </header>
       <div class="padding">
         <!----------------------- padding only  start after 1024 px resolution ------------------------>
@@ -576,72 +581,144 @@
         <!----------------------------------- /* parsentage end*/ ----------------------------->
         <!----------------------------------- /*social container*/ ----------------------------->
         <section>
-          <div class="Most-asked-questions">
-            <div class="Most-asked-questions-box">
-              <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container1">
-                <div class="Most-asked-questions-box-heading">
-                  <h1>Question</h1>
-                  <div onclick="Arrow1()"  class="arrow-background"  >
-                    <i class="fa-solid fa-angle-down rotate" id="arrowbtn1"></i>
+          <div class="Most-asked-questions-wrap">
+            <div class="Most-asked-questions">
+              <div class="Most-asked-questions-box">
+                <div class="Most-asked-questions-box-container" style="height: 15rem;" id="Most-asked-questions-box-container1">
+                  <div class="Most-asked-questions-box-heading">
+                    <h1>Question</h1>
+                    <div onclick="ArrowClick(0)"  class="arrow-background"  >
+                      <i class="fa-solid fa-angle-down " id="arrowbtn1"></i>
+                    </div>
+                  </div>
+                  <div class="Most-asked-questions-box-paragraph" style="height: 11rem;" id="Most-asked-questions-box-paragraph1">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid deserunt, eveniet, ab ex iure illum voluptates
+                      sapiente aperiam velit ad id esse modi nostrum obcaecati
+                      odio vero aut ut quas?
+                    </p>
                   </div>
                 </div>
-                <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph1">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid deserunt, eveniet, ab ex iure illum voluptates
-                    sapiente aperiam velit ad id esse modi nostrum obcaecati
-                    odio vero aut ut quas?
-                  </p>
+                <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container2">
+                  <div class="Most-asked-questions-box-heading">
+                    <h1>Question</h1>
+                    <div onclick="ArrowClick(1)"  class="arrow-background" id="arrowbtn2" >
+                      <i class="fa-solid fa-angle-down "></i>
+                    </div>
+                  </div>
+                  <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph2">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid deserunt, eveniet, ab ex iure illum voluptates
+                      sapiente aperiam velit ad id esse modi nostrum obcaecati
+                      odio vero aut ut quas?
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container2">
-                <div class="Most-asked-questions-box-heading">
-                  <h1>Question</h1>
-                  <div onclick="Arrow2()"  class="arrow-background" id="arrowbtn2" >
-                    <i class="fa-solid fa-angle-down"></i>
+              <div class="Most-asked-questions-box">
+                <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container3">
+                  <div class="Most-asked-questions-box-heading">
+                    <h1>Question</h1>
+                    <div onclick="ArrowClick(2)"  class="arrow-background" id="arrowbtn3" >
+                      <i class="fa-solid fa-angle-down  "></i>
+                    </div>
+                  </div>
+                  <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph3">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid deserunt, eveniet, ab ex iure illum voluptates
+                      sapiente aperiam velit ad id esse modi nostrum obcaecati
+                      odio vero aut ut quas?
+                    </p>
                   </div>
                 </div>
-                <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph2">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid deserunt, eveniet, ab ex iure illum voluptates
-                    sapiente aperiam velit ad id esse modi nostrum obcaecati
-                    odio vero aut ut quas?
-                  </p>
+                <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container4">
+                  <div class="Most-asked-questions-box-heading">
+                    <h1>Question</h1>
+                    <div onclick="ArrowClick(3)"  class="arrow-background" id="arrowbtn4" >
+                      <i class="fa-solid fa-angle-down "></i>
+                    </div>
+                  </div>
+                  <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph4">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid deserunt, eveniet, ab ex iure illum voluptates
+                      sapiente aperiam velit ad id esse modi nostrum obcaecati
+                      odio vero aut ut quas?
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="Most-asked-questions-box">
-              <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container3">
-                <div class="Most-asked-questions-box-heading">
-                  <h1>Question</h1>
-                  <div onclick="Arrow3()"  class="arrow-background" id="arrowbtn3" >
-                    <i class="fa-solid fa-angle-down"></i>
+            <div class="Most-asked-questions">
+              <div class="Most-asked-questions-box">
+                <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container5">
+                  <div class="Most-asked-questions-box-heading">
+                    <h1>Question</h1>
+                    <div onclick="ArrowClick(4)"  class="arrow-background"  >
+                      <i class="fa-solid fa-angle-down " id="arrowbtn5"></i>
+                    </div>
+                  </div>
+                  <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph5">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid deserunt, eveniet, ab ex iure illum voluptates
+                      sapiente aperiam velit ad id esse modi nostrum obcaecati
+                      odio vero aut ut quas?
+                    </p>
                   </div>
                 </div>
-                <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph3">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid deserunt, eveniet, ab ex iure illum voluptates
-                    sapiente aperiam velit ad id esse modi nostrum obcaecati
-                    odio vero aut ut quas?
-                  </p>
+                <div class="Most-asked-questions-box-container"  style="height: 15rem;"  id="Most-asked-questions-box-container6">
+                  <div class="Most-asked-questions-box-heading">
+                    <h1>Question</h1>
+                    <div onclick="ArrowClick(5)"  class="arrow-background" id="arrowbtn6" >
+                      <i class="fa-solid fa-angle-down "></i>
+                    </div>
+                  </div>
+                  <div class="Most-asked-questions-box-paragraph" style="height: 11rem;" id="Most-asked-questions-box-paragraph6">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid deserunt, eveniet, ab ex iure illum voluptates
+                      sapiente aperiam velit ad id esse modi nostrum obcaecati
+                      odio vero aut ut quas?
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container4">
-                <div class="Most-asked-questions-box-heading">
-                  <h1>Question</h1>
-                  <div onclick="Arrow4()"  class="arrow-background" id="arrowbtn4" >
-                    <i class="fa-solid fa-angle-down"></i>
+              <div class="Most-asked-questions-box">
+                <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container7">
+                  <div class="Most-asked-questions-box-heading">
+                    <h1>Question</h1>
+                    <div onclick="ArrowClick(6)"  class="arrow-background" id="arrowbtn7" >
+                      <i class="fa-solid fa-angle-down  "></i>
+                    </div>
+                  </div>
+                  <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph7">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid deserunt, eveniet, ab ex iure illum voluptates
+                      sapiente aperiam velit ad id esse modi nostrum obcaecati
+                      odio vero aut ut quas?
+                    </p>
                   </div>
                 </div>
-                <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph4">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid deserunt, eveniet, ab ex iure illum voluptates
-                    sapiente aperiam velit ad id esse modi nostrum obcaecati
-                    odio vero aut ut quas?
-                  </p>
+                <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container8">
+                  <div class="Most-asked-questions-box-heading">
+                    <h1>Question</h1>
+                    <div onclick="ArrowClick(7)"  class="arrow-background" id="arrowbtn8" >
+                      <i class="fa-solid fa-angle-down "></i>
+                    </div>
+                  </div>
+                  <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph8">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid deserunt, eveniet, ab ex iure illum voluptates
+                      sapiente aperiam velit ad id esse modi nostrum obcaecati
+                      odio vero aut ut quas?
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
