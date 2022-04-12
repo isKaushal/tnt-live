@@ -5,49 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- <link rel="icon" type="image/x-icon" href="/images/Testntrack_logo -----.png"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" type="text/css" href="/css fils/all.css" />
-    <link rel="stylesheet" type="text/css" href="/css fils/main.css" />
-    <link rel="stylesheet" type="text/css" href="/css fils/preloder.css" />
+    <!-- <link rel="icon" type="image/x-icon" href="/images/Testntrack_logo.png"> -->
+    <link rel="stylesheet" type="text/css" href="css fils/all.css" />
+    <link rel="stylesheet" type="text/css" href="css fils/main.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="css fils/preloder.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css fils/background theme tnt.css" />
     <title>Test-n-Track</title>
   </head>
-  <!-- onload="load()"  -->
-  <body>
+  
+  <body onload="load()" >
     <!-- --------------------------------preloder --------------------------------->
-    <!-- <div style="transition: 1s;" class="preloder-container-wrap" id="preloder-container-wrap">
-      <div class="preloder-container">
-        <div class="second-container">
-          <div class="first-icon">
-            <div class="first-icon-inner">
-              <div class="first-icon-inner-cut"></div>
-            </div>
-          </div>
-          <div class="second-icon">
-            <div class="second-icon-inner">
-              <div class="second-icon-inner-cut"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+    <div style="transition: 1s;" class="preloder-container-wrap" id="preloder-container-wrap"></div>
     <!-- --------------------------------preloder --------------------------------->
     <!----------------------- background theme start --------------------------->
     <div id="main"></div>
-    <!-- ------------------------------html fatched ---------------------------->
     <!-- ------------------------------background theme end ---------------------------->
     <div class="content">
       <header>
-        <!-- header for 300px to 800px only-->
-        <!-- <span-1> -->
           <div class="logo-container">
             <a href="testntrack.html">
-              <img src="/images/logo_01.png" alt="" />
+              <img src="images/logo_01.png" alt="" />
             </a>
           </div>
           <div class="icons">
@@ -65,29 +48,25 @@
               </div>
             </ul>
           </div>
-        <!-- </span-1> -->
-        <!-- header for 300px to 800px only-->
       </header>
-      <div class="padding">
-        <!----------------------- padding only  start after 1024 px resolution ------------------------>
-
+      <div class="padding"><!-- padding only  start after 1024 px resolution --->
         <section class="logo-child">
           <div class="image-changer">
             <div class="logo-left" id="logo-left">
-              <img id="mac1" src="/images/mac1.png" alt="image" />
-              <img id="mac2" src="/images/mac2.png" alt="image" />
-              <img id="mac3" src="/images/mac3.png" alt="image" />
-              <img id="mac4" src="/images/mac4.png" alt="image" />
+              <img id="mac1" src="images/Teblet_001-003.png" alt="image" />
+              <img id="mac2" src="images/mac2.png" alt="image" />
+              <img id="mac3" src="images/mac3.png" alt="image" />
+              <img id="mac4" src="images/mac4.png" alt="image" />
             </div>
             <div class="logo-left2" id="logo-left2">
-              <img id="tab1" src="/images/Teblet_004.png" alt="image" />
-              <img id="tab2" src="/images/Teblet_003.png" alt="image" />
-              <img id="tab3" src="/images/Teblet_002.png" alt="image" />
-              <img id="tab4" src="/images/mac4.png" alt="image" />
+              <img id="tab1" src="images/Teblet_004.png" alt="image" />
+              <img id="tab2" src="images/Teblet_001-003.png" alt="image" />
+              <img id="tab3" src="images/Teblet_002.png" alt="image" />
+              <img id="tab4" src="images/mac4.png" alt="image" />
             </div>
           </div>
           <div class="social-links">
-            <img src="/images/white logo.png" alt="logo" />
+            <img src="images/white logo.png" alt="logo" />
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad
               cumque explicabo reprehenderit officiis temporibus voluptas modi
@@ -408,19 +387,19 @@
         <!----------------------------------------------------- mobile ---------------------------->
         <section class="mobile">
           <div class="app-features" id="app-features">
-            <div id="changer1" class="change" id="toggle">
+            <div id="changer1" class="change" >
               <img
                 id="image1"
                 id="gif-common"
-                src="/images/001_01.gif"
+                src="images/001_01.gif"
                 alt="APP UI"
               />
             </div>
-            <div id="changer2" class="change" id="toggle">
+            <div id="changer2" class="change" >
               <div class="mobile-gif" id="image2" id="gif-common">
-                <img id="gif" src="/images/01_01.gif" alt="APP UI" />
+                <img id="gif" src="images/01_01.gif" alt="APP UI" />
               </div>
-              <div class="app-features-paragraph" id="paragraph2" id="toggle">
+              <div class="app-features-paragraph" id="paragraph2" >
                 <h1>Slid Name</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -433,8 +412,8 @@
                 </p>
               </div>
             </div>
-            <div id="changer3" class="change" id="toggle">
-              <div class="app-features-paragraph" id="paragraph3" id="toggle">
+            <div id="changer3" class="change" >
+              <div class="app-features-paragraph" id="paragraph3" >
                 <h1>Slid Name</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -446,15 +425,15 @@
                   ab?
                 </p>
               </div>
-              <div class="mobile-gif" id="image3" id="gif-common" id="toggle">
-                <img id="gif" src="/images/Revrs02.gif" alt="APP UI" />
+              <div class="mobile-gif" id="image3" id="gif-common" >
+                <img id="gif" src="images/Revrs02.gif" alt="APP UI" />
               </div>
             </div>
-            <div id="changer4" class="change" id="toggle">
-              <div class="mobile-gif" id="image4" id="gif-common" id="toggle">
-                <img id="gif" src="/images/Revrs03.gif" alt="APP UI" />
+            <div id="changer4" class="change" >
+              <div class="mobile-gif" id="image4" id="gif-common" >
+                <img id="gif" src="images/Revrs03.gif" alt="APP UI" />
               </div>
-              <div class="app-features-paragraph" id="paragraph4" id="toggle">
+              <div class="app-features-paragraph" id="paragraph4" >
                 <h1>Slid Name</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -467,8 +446,8 @@
                 </p>
               </div>
             </div>
-            <div id="changer5" class="change" id="toggle">
-              <div class="app-features-paragraph" id="paragraph5" id="toggle">
+            <div id="changer5" class="change" >
+              <div class="app-features-paragraph" id="paragraph5" >
                 <h1>Slid Name</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -480,15 +459,15 @@
                   ab?
                 </p>
               </div>
-              <div class="mobile-gif" id="image5" id="gif-common" id="toggle">
-                <img id="gif" src="/images/Revrs04.gif" alt="APP UI" />
+              <div class="mobile-gif" id="image5" id="gif-common" >
+                <img id="gif" src="images/Revrs04.gif" alt="APP UI" />
               </div>
             </div>
-            <div id="changer6" class="change" id="toggle">
-              <div class="mobile-gif" id="image6" id="gif-common" id="toggle">
-                <img id="gif" src="/images/Revrs05.gif" alt="APP UI" />
+            <div id="changer6" class="change" >
+              <div class="mobile-gif" id="image6" id="gif-common" >
+                <img id="gif" src="images/Revrs05.gif" alt="APP UI" />
               </div>
-              <div class="app-features-paragraph" id="paragraph6" id="toggle">
+              <div class="app-features-paragraph" id="paragraph6" >
                 <h1>Slid Name</h1>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -773,7 +752,7 @@
             </div>
             <span-2>
               <div class="form-image">
-                <img src="images/form-6.png" id="form" alt="form-image" />
+                <img src="images/notes_002.png" id="form" alt="form-image" />
               </div>
             </span-2>
           </form>
@@ -786,9 +765,9 @@
       <section class="price">
         <div class="price-inner">
           <p>Download Our Pricing List</p>
-          <div class="price-button" id="price">
-            <a href="temp for download" download="prices.txt">Download</a>
-          </div>
+          <button class="price-button" id="price">
+            <a href="temp for download" download="prices.pdf">Download</a>
+          </button>
         </div>
       </section>
       <!------------------------- priceing end ------------------------------------->
@@ -796,7 +775,7 @@
         <div class="footer-tile">
           <div class="phragraph-wrap">
             <div class="footer-logo">
-              <img src="/images/white logo.png" alt="" />
+              <img src="images/white logo.png" alt="" />
             </div>
             <p>
               Lorem ipsum dolor sit consectetur, adipisicing elit. Pariatur eos
@@ -867,7 +846,7 @@
         </div>
       </footer>
     </div>
-    <script src="/js fils/website.js"></script>
+    <script src="js fils/website.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
@@ -875,7 +854,7 @@
       // <!------------------------- slider script -------------------------->
       const swiper = new Swiper(".swiper", {
         autoplay: {
-          delay: 4000,
+          delay: 6000,
           disableOnIntraction: true,
         },
         loop: true,

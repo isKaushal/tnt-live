@@ -1,14 +1,55 @@
-// ------------------------background theme caller---------------------------//
- 
-let nav = document.getElementById("main");
+// ------------------------preloder html---------------------------//
 
-fetch('other_html/bg.html')
-.then(res=>res.text())
-.then(data=>{
-  nav.innerHTML=data
-})
+let preloder  = document.getElementById("preloder-container-wrap");
 
-// ------------------------background theme caller---------------------------//
+preloder.innerHTML = `
+<div class="preloder-container">
+<div class="second-container">
+  <div class="first-icon">
+    <div class="first-icon-inner">
+      <div class="first-icon-inner-cut"></div>
+    </div>
+  </div>
+  <div class="second-icon">
+    <div class="second-icon-inner">
+      <div class="second-icon-inner-cut"></div>
+    </div>
+  </div>
+</div>
+</div>
+`
+
+
+// ------------------------preloder html---------------------------//
+// ------------------------background theme---------------------------//
+
+let theme = document.getElementById("main");
+theme.innerHTML = `
+  <div id="ani">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+    <div class="dot3"></div>
+    <div class="dot4"></div>
+    <div class="dot5"></div>
+    <div class="dot6"></div>
+    <div class="dot7"></div>
+    <div class="dot8"></div>
+  </div>
+  <div class="container">
+    <div class="corner-circle1"></div>
+    <div class="corner-circle2"></div>
+    <div class="corner-circle3"></div>
+    <div class="corner-circle4"></div>
+    <div class="corner-circle5"></div>
+    <div class="corner-circle6"></div>
+    <div class="corner-circle7"></div>
+    <div class="corner-circle8"></div>
+    <div class="corner-circle9"></div>
+    <div class="corner-circle10"></div>
+    <div class="corner-circle11"></div>
+  </div>`;
+
+// ------------------------background theme---------------------------//
 // ------------------------FIRST IMAGE ANINATION START---------------------------//
 
 
@@ -60,7 +101,7 @@ document.addEventListener('scroll', () =>  {
       <div class="animation-wrap" id="animation-wrap">
           <div class="animation" id="animation">
               <div class="matrial" id="matrial">
-                  <img src="/images/1.png" alt="">
+                  <img src="images/1.png" alt="">
               </div>
           </div> 
       </div>
@@ -73,7 +114,7 @@ document.addEventListener('scroll', () =>  {
         My.insertAdjacentHTML("afterbegin",`
         <div class="first-circle">
           <div class="second-circle">
-            <img src="/images/2.png" alt="">
+            <img src="images/2.png" alt="">
           </div>
         </div>
       `)
@@ -153,7 +194,7 @@ gsap.registerPlugin(ScrollTrigger)
 const tl = gsap.timeline({
   repeat:-1,
   scrollTrigger:{
-    trigger:toggle,
+    trigger:"#gif",
     markers: "true",
   }
 });
@@ -189,6 +230,7 @@ tl.from('#image2',{x:-100,duration:2,opacity:0})
   .from('#paragraph6',{x:-0,duration:1.5,opacity:1},'<')
   .from('#changer6',{display:"flex"})
 
+tl.restart();  
 
 
 // --------------------------PERCENTAGE SCROLL TRIGGER--------------------------//
@@ -209,9 +251,9 @@ gsap.timeline({
 
   }
 })
-  .from("#section1",{y :50, duration:1,opacity:0 ,delay :1.6})
+  .from("#section1",{y :50, duration:1,opacity:0 ,delay :0.4})
   .from("#offset1", {strokeDasharray:20,duration:5},"<")
-  .to("#offset1", {strokeDashoffset:170,duration:4},"<")
+  .to("#offset1", {strokeDashoffset:170,duration:5},"<")
 
 // -------------------------------FIRST 70% CIRCLE---------------------------//
 
@@ -229,9 +271,9 @@ gsap.timeline({
 
   }
 })
-  .from("#section2",{y :50, duration:1,opacity:0,delay :0.8})
+  .from("#section2",{y :50, duration:1,opacity:0,delay :0.2})
   .from("#offset2", {strokeDasharray:20,duration:5},"<")
-  .to("#offset2", {strokeDashoffset:190,duration:4},"<")  
+  .to("#offset2", {strokeDashoffset:190,duration:5},"<")  
 
 // -------------------------------FIRST 65% CIRCLE---------------------------//
 
@@ -251,7 +293,7 @@ gsap.timeline({
 })
   .from("#section3",{y :50, duration:1,opacity:0 })
   .from("#offset3", {strokeDasharray:20,duration:5},"<")
-  .to("#offset3", {strokeDashoffset:220,duration:4},"<") 
+  .to("#offset3", {strokeDashoffset:220,duration:5},"<") 
 
 // --------------------------PERCENTAGE SCROLL TRIGGER--------------------------//
 
@@ -272,7 +314,7 @@ $(window).scroll(function() {
       }).animate({
         countNum: countTo
       }, {
-        duration: 6000,
+        duration: 5900,
         easing: 'swing',
         step: function() {
           $this.text(Math.floor(this.countNum));
@@ -287,16 +329,16 @@ $(window).scroll(function() {
   }
 });
 
-// let loding = document.getElementById("preloder-container-wrap")
+let loding = document.getElementById("preloder-container-wrap")
  
-// function load() {
-//   setTimeout(() => {
-//     loding.style.opacity = 0;
-//   },2000);
-//   setTimeout(() => {
-//     loding.style.display = "none";
-//   },4000);
-// }
+function load() {
+  setTimeout(() => {
+    loding.style.opacity = 0;
+  },3000);
+  setTimeout(() => {
+    loding.style.display = "none";
+  },4000);
+}
 
 
 let arrowBoxList = [
