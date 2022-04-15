@@ -188,49 +188,49 @@ document.addEventListener('scroll', () =>  {
 
 // ------------------------IS IN VIEW PORT FUNCTON END--------------------//
 //------------------------ FEATURS ANINMATION ---------------------//
-let toggle = document.getElementById("toggle");
+// let toggle = document.getElementById("toggle");
 
-gsap.registerPlugin(ScrollTrigger)
-const tl = gsap.timeline({
-  repeat:-1,
-  scrollTrigger:{
-    trigger:"#gif",
-    markers: "true",
-  }
-});
+// gsap.registerPlugin(ScrollTrigger)
+// const tl = gsap.timeline({
+//   repeat:-1,
+//   scrollTrigger:{
+//     trigger:"#gif",
+    
+//   }
+// });
 
-// gsap.timeline({repeat:-1,delay:5})
-tl.from('#image2',{x:-100,duration:2,opacity:0})
-  .from('#paragraph2',{x:100,duration:2,opacity:0},'<')
-  .from('#image2',{x:0,delay:6,duration:1.5,opacity:1})
-  .from('#paragraph2',{x:-0,duration:1.5,opacity:1},'<')
-  .from('#changer2',{display:"flex"})
+// // gsap.timeline({repeat:-1,delay:5})
+// tl.from('#image2',{x:-100,duration:2,opacity:0})
+//   .from('#paragraph2',{x:100,duration:2,opacity:0},'<')
+//   .from('#image2',{x:0,delay:6,duration:1.5,opacity:1})
+//   .from('#paragraph2',{x:-0,duration:1.5,opacity:1},'<')
+//   .from('#changer2',{display:"flex"})
 
-  .from('#image3',{x:100,duration:2,opacity:0})
-  .from('#paragraph3',{x:-100,duration:2,opacity:0},'<')
-  .from('#image3',{x:-0,delay:6,duration:1.5,opacity:1})
-  .from('#paragraph3',{x:0,duration:1.5,opacity:1},'<')
-  .from('#changer3',{display:"flex"})
+//   .from('#image3',{x:100,duration:2,opacity:0})
+//   .from('#paragraph3',{x:-100,duration:2,opacity:0},'<')
+//   .from('#image3',{x:-0,delay:6,duration:1.5,opacity:1})
+//   .from('#paragraph3',{x:0,duration:1.5,opacity:1},'<')
+//   .from('#changer3',{display:"flex"})
 
-  .from('#image4',{x:-100,duration:2,opacity:0})
-  .from('#paragraph4',{x:100,duration:2,opacity:0},'<')
-  .from('#image4',{x:0,delay:6,duration:1.5,opacity:1})
-  .from('#paragraph4',{x:-0,duration:1.5,opacity:1},'<')
-  .from('#changer4',{display:"flex"})
+//   .from('#image4',{x:-100,duration:2,opacity:0})
+//   .from('#paragraph4',{x:100,duration:2,opacity:0},'<')
+//   .from('#image4',{x:0,delay:6,duration:1.5,opacity:1})
+//   .from('#paragraph4',{x:-0,duration:1.5,opacity:1},'<')
+//   .from('#changer4',{display:"flex"})
 
-  .from('#image5',{x:100,duration:2,opacity:0})
-  .from('#paragraph5',{x:-100,duration:2,opacity:0},'<')
-  .from('#image5',{x:-0,delay:6,duration:1.5,opacity:1})
-  .from('#paragraph5',{x:0,duration:1.5,opacity:1},'<')
-  .from('#changer5',{display:"flex"})
+//   .from('#image5',{x:100,duration:2,opacity:0})
+//   .from('#paragraph5',{x:-100,duration:2,opacity:0},'<')
+//   .from('#image5',{x:-0,delay:6,duration:1.5,opacity:1})
+//   .from('#paragraph5',{x:0,duration:1.5,opacity:1},'<')
+//   .from('#changer5',{display:"flex"})
 
-  .from('#image6',{x:-100,duration:2,opacity:0})
-  .from('#paragraph6',{x:100,duration:2,opacity:0},'<')
-  .from('#image6',{x:0,delay:6,duration:1.5,opacity:1})
-  .from('#paragraph6',{x:-0,duration:1.5,opacity:1},'<')
-  .from('#changer6',{display:"flex"})
+//   .from('#image6',{x:-100,duration:2,opacity:0})
+//   .from('#paragraph6',{x:100,duration:2,opacity:0},'<')
+//   .from('#image6',{x:0,delay:6,duration:1.5,opacity:1})
+//   .from('#paragraph6',{x:-0,duration:1.5,opacity:1},'<')
+//   .from('#changer6',{display:"flex"})
 
-tl.restart();  
+// tl.restart();  
 
 
 // --------------------------PERCENTAGE SCROLL TRIGGER--------------------------//
@@ -247,7 +247,7 @@ gsap.timeline({
     trigger:section1,
     trigger:offset1,
     trigger:percentage1,
-    markers: "true",
+    
 
   }
 })
@@ -267,7 +267,7 @@ gsap.timeline({
     trigger:section2,
     trigger:offset2,
     trigger:percentage2,
-    markers: "true",
+    
 
   }
 })
@@ -287,7 +287,6 @@ gsap.timeline({
     trigger:section3,
     trigger:offset3,
     trigger:percentage3,
-    markers: "true",
 
   }
 })
@@ -414,34 +413,3 @@ for(let i = 0;i < arrowBoxList.length;i++)
   }
 }
 }
-
-
-
-// let demo1 = document.getElementById("demo1")
-// let demo2 = document.getElementById("demo2")
-// let demo3 = document.getElementById("demo3")
-// let changer = document.getElementById("changer")
-// let isExpanded = false;
-
-// function resizer() {
-  
-//   if(!isExpanded){
-//     newFunction();
-//     isExpanded = true;
-//   }else{
-//     newFunction_1();
-//     isExpanded = false;    
-//   }
-  
-
-//   function newFunction_1() {
-//     demo2.style.height = '20%';
-//     demo3.style.height = '0%';
-//   }
-
-//   function newFunction() {
-//     demo2.style.height = '60%';
-//     demo3.style.height = '50%';
-//   }
-// }
-  

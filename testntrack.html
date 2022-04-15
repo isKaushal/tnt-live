@@ -8,48 +8,77 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <link
-    rel="stylesheet"
-    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
-    <!-- <link rel="icon" type="image/x-icon" href="/images/Testntrack_logo.png"> -->
+    <link rel="icon" type="image/x-icon" href="/images/tnt-01.png" />
     <link rel="stylesheet" type="text/css" href="css fils/all.css" />
     <link rel="stylesheet" type="text/css" href="css fils/main.css" />
+    <link rel="stylesheet" type="text/css" href="css fils/mobile.css" />
     <!-- <link rel="stylesheet" type="text/css" href="css fils/preloder.css" /> -->
-    <link rel="stylesheet" type="text/css" href="css fils/background theme tnt.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="css fils/background theme tnt.css"
+    />
     <title>Test-n-Track</title>
   </head>
-  
-  <body onload="load()" >
+
+  <body onload="load()">
     <!-- --------------------------------preloder --------------------------------->
-    <div style="transition: 1s;" class="preloder-container-wrap" id="preloder-container-wrap"></div>
+    <div
+      style="transition: 1s"
+      class="preloder-container-wrap"
+      id="preloder-container-wrap"
+    ></div>
     <!-- --------------------------------preloder --------------------------------->
     <!----------------------- background theme start --------------------------->
     <div id="main"></div>
     <!-- ------------------------------background theme end ---------------------------->
     <div class="content">
       <header>
-          <div class="logo-container">
-            <a href="testntrack.html">
-              <img src="images/logo_01.png" alt="" />
-            </a>
-          </div>
-          <div class="icons">
-            <input id="check" type="checkbox" />
-            <label id="label" for="check">
-              <i id="bars" class="fa-solid fa-bars"></i>
-              <i id="cross" class="fa-solid fa-xmark"></i>
-            </label>
-            <ul>
-              <div class="margin">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Gallary</a></li>
-              </div>
-            </ul>
-          </div>
+        <div class="logo-container">
+          <a href="testntrack.html">
+            <img src="images/tnt Shape-01.png" alt="" />
+          </a>
+        </div>
+        <div class="icons">
+          <input id="check" type="checkbox" />
+          <label id="label" for="check">
+            <i id="bars" class="fa-solid fa-bars"></i>
+            <i id="cross" class="fa-solid fa-xmark"></i>
+          </label>
+          <ul>
+            <div class="margin">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Gallary</a></li>
+            </div>
+          </ul>
+        </div>
       </header>
-      <div class="padding"><!-- padding only  start after 1024 px resolution --->
+
+      <!-- /* chat bot ui*/ -->
+      <div class="chat-bot-button" id="chat-bot-button">
+        <i class="fa-solid fa-comments"></i>
+      </div>
+      <!-- /* chat bot ui*/ -->
+      <!-- chat bot container -->
+      <!-- <div class="chatbot-container" id="chatbot-container">
+        <div class="chatbot-container-heading">
+          <h1>HI</h1>
+          <h2>Welcome to TestnTrack</h2>
+        </div>
+        <div class="chatbot-container-inner-wrap">
+          <div class="chatbot-container-inner"></div>
+        </div>
+      </div> -->
+      <!-- chat bot container -->
+
+      <div class="padding">
+        <!-- padding only  start after 1024 px resolution --->
+
         <section class="logo-child">
           <div class="image-changer">
             <div class="logo-left" id="logo-left">
@@ -67,6 +96,17 @@
           </div>
           <div class="social-links">
             <img src="images/white logo.png" alt="logo" />
+            <!-- type writer animation -->
+            <div class="type-writer-container">
+              <h1>
+                I am a
+                <span
+                  class="txt-type"
+                  data-words='["Developer","Designer","Creator"]'
+                ></span>
+              </h1>
+            </div>
+            <!-- type writer animation -->
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad
               cumque explicabo reprehenderit officiis temporibus voluptas modi
@@ -88,6 +128,7 @@
             </div>
           </div>
         </section>
+
         <section class="content-top-child">
           <div class="content-child-outer1">
             <div class="content-child-left">
@@ -134,6 +175,7 @@
             </div>
           </div>
         </section>
+
         <!-- Ceo & Founders saction -->
         <section class="content-middle-child">
           <div class="owners">
@@ -249,6 +291,7 @@
           <!----------------- /* for 1024px and bigger resolutions */------------------------- -->
           <!-- slider end-->
         </section>
+
         <!-------------------- Ceo & Founders saction---------------------- -->
         <!------------------------ our team start--------------------------- -->
         <section class="content-middle-child-two">
@@ -318,6 +361,7 @@
             </div>
           </div>
         </section>
+
         <!------------------------------ our team end -------------------------------- -->
         <!------------------------------matirial and  tech part ------------------------------->
         <section class="content-middle-child-three">
@@ -384,106 +428,253 @@
           <div class="tachnologies-right" id="animation"></div>
           <!------------------------ in JS---------------------------------->
         </section>
-        <!----------------------------------------------------- mobile ---------------------------->
-        <section class="mobile">
-          <div class="app-features" id="app-features">
-            <div id="changer1" class="change" >
-              <img
-                id="image1"
-                id="gif-common"
-                src="images/001_01.gif"
-                alt="APP UI"
-              />
-            </div>
-            <div id="changer2" class="change" >
-              <div class="mobile-gif" id="image2" id="gif-common">
-                <img id="gif" src="images/01_01.gif" alt="APP UI" />
+        <!------------------------------ mobilesaction for 300px to 1024px  resolutions------------------------------- -->
+        <span-1>
+          <div class="mobile-saction-for-300">
+            <div class="mobile-saction-for-300-inner">
+              <div class="mobile-saction-for-300-inner-images">
+                <img src="ui/Testntrack_001 (1).png" alt="" />
               </div>
-              <div class="app-features-paragraph" id="paragraph2" >
-                <h1>Slid Name</h1>
+              <div class="mobile-saction-for-300-inner-paragraph">
+              <h2>Slid Name</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Quibusdam molestiae, neque dolorem, culpa similique reiciendis
-                  amet qui, maxime cupiditate fugiat placeat commodi non. Porro
-                  aperiam magnam aliquam doloribus cumque odio nemo est autem
-                  delectus repudiandae. Suscipit, numquam ab esse nam omnis
-                  voluptate! Asperiores pariatur quis ipsum ullam provident ea
-                  ab?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quaerat quia temporibus deleniti itaque totam, hic sit eos
+                  minus! Quisquam ad amet, sunt ullam ab repellat minima debitis
+                  inventore. Similique error velit perspiciatis praesentium
+                  ipsam doloribus voluptatem delectus beatae, sed incidunt
+                  minima necessitatibus, est, porro tempora fugit distinctio
                 </p>
               </div>
             </div>
-            <div id="changer3" class="change" >
-              <div class="app-features-paragraph" id="paragraph3" >
-                <h1>Slid Name</h1>
+            <div class="mobile-saction-for-300-inner">
+              <div class="mobile-saction-for-300-inner-images">
+                <img src="ui/Testntrack_002.png" alt="" />
+              </div>
+              <div class="mobile-saction-for-300-inner-paragraph">
+              <h2>Slid Name</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Quibusdam molestiae, neque dolorem, culpa similique reiciendis
-                  amet qui, maxime cupiditate fugiat placeat commodi non. Porro
-                  aperiam magnam aliquam doloribus cumque odio nemo est autem
-                  delectus repudiandae. Suscipit, numquam ab esse nam omnis
-                  voluptate! Asperiores pariatur quis ipsum ullam provident ea
-                  ab?
-                </p>
-              </div>
-              <div class="mobile-gif" id="image3" id="gif-common" >
-                <img id="gif" src="images/Revrs02.gif" alt="APP UI" />
-              </div>
-            </div>
-            <div id="changer4" class="change" >
-              <div class="mobile-gif" id="image4" id="gif-common" >
-                <img id="gif" src="images/Revrs03.gif" alt="APP UI" />
-              </div>
-              <div class="app-features-paragraph" id="paragraph4" >
-                <h1>Slid Name</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Quibusdam molestiae, neque dolorem, culpa similique reiciendis
-                  amet qui, maxime cupiditate fugiat placeat commodi non. Porro
-                  aperiam magnam aliquam doloribus cumque odio nemo est autem
-                  delectus repudiandae. Suscipit, numquam ab esse nam omnis
-                  voluptate! Asperiores pariatur quis ipsum ullam provident ea
-                  ab?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quaerat quia temporibus deleniti itaque totam, hic sit eos
+                  minus! Quisquam ad amet, sunt ullam ab repellat minima debitis
+                  inventore. Similique error velit perspiciatis praesentium
+                  ipsam doloribus voluptatem delectus beatae, sed incidunt
+                  minima necessitatibus, est, porro tempora fugit distinctio
                 </p>
               </div>
             </div>
-            <div id="changer5" class="change" >
-              <div class="app-features-paragraph" id="paragraph5" >
-                <h1>Slid Name</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Quibusdam molestiae, neque dolorem, culpa similique reiciendis
-                  amet qui, maxime cupiditate fugiat placeat commodi non. Porro
-                  aperiam magnam aliquam doloribus cumque odio nemo est autem
-                  delectus repudiandae. Suscipit, numquam ab esse nam omnis
-                  voluptate! Asperiores pariatur quis ipsum ullam provident ea
-                  ab?
-                </p>
+            <div class="mobile-saction-for-300-inner">
+              <div class="mobile-saction-for-300-inner-images">
+                <img src="ui/Testntrack_003.png" alt="" />
               </div>
-              <div class="mobile-gif" id="image5" id="gif-common" >
-                <img id="gif" src="images/Revrs04.gif" alt="APP UI" />
+              <div class="mobile-saction-for-300-inner-paragraph">
+              <h2>Slid Name</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quaerat quia temporibus deleniti itaque totam, hic sit eos
+                  minus! Quisquam ad amet, sunt ullam ab repellat minima debitis
+                  inventore. Similique error velit perspiciatis praesentium
+                  ipsam doloribus voluptatem delectus beatae, sed incidunt
+                  minima necessitatibus, est, porro tempora fugit distinctio
+                </p>
               </div>
             </div>
-            <div id="changer6" class="change" >
-              <div class="mobile-gif" id="image6" id="gif-common" >
-                <img id="gif" src="images/Revrs05.gif" alt="APP UI" />
+            <div class="mobile-saction-for-300-inner">
+              <div class="mobile-saction-for-300-inner-images">
+                <img src="ui/Testntrack_004.png" alt="" />
               </div>
-              <div class="app-features-paragraph" id="paragraph6" >
-                <h1>Slid Name</h1>
+              <div class="mobile-saction-for-300-inner-paragraph">
+              <h2>Slid Name</h2>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Quibusdam molestiae, neque dolorem, culpa similique reiciendis
-                  amet qui, maxime cupiditate fugiat placeat commodi non. Porro
-                  aperiam magnam aliquam doloribus cumque odio nemo est autem
-                  delectus repudiandae. Suscipit, numquam ab esse nam omnis
-                  voluptate! Asperiores pariatur quis ipsum ullam provident ea
-                  ab?
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quaerat quia temporibus deleniti itaque totam, hic sit eos
+                  minus! Quisquam ad amet, sunt ullam ab repellat minima debitis
+                  inventore. Similique error velit perspiciatis praesentium
+                  ipsam doloribus voluptatem delectus beatae, sed incidunt
+                  minima necessitatibus, est, porro tempora fugit distinctio
                 </p>
+              </div>
+            </div>
+            <div class="mobile-saction-for-300-inner">
+              <div class="mobile-saction-for-300-inner-images">
+                <img src="ui/Testntrack_005.png" alt="" />
+              </div>
+              <div class="mobile-saction-for-300-inner-paragraph">
+              <h2>Slid Name</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quaerat quia temporibus deleniti itaque totam, hic sit eos
+                  minus! Quisquam ad amet, sunt ullam ab repellat minima debitis
+                  inventore. Similique error velit perspiciatis praesentium
+                  ipsam doloribus voluptatem delectus beatae, sed incidunt
+                  minima necessitatibus, est, porro tempora fugit distinctio
+                </p>
+              </div>
+            </div>
+            <div class="mobile-saction-for-300-inner">
+              <div class="mobile-saction-for-300-inner-images">
+                <img src="ui/Testntrack_006.png" alt="" />
+              </div>
+              <div class="mobile-saction-for-300-inner-paragraph">
+                <h2>Slid Name</h2>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Quaerat quia temporibus deleniti itaque totam, hic sit eos
+                  minus! Quisquam ad amet, sunt ullam ab repellat minima debitis
+                  inventore. Similique error velit perspiciatis praesentium
+                  ipsam doloribus voluptatem delectus beatae, sed incidunt
+                </p>
+                  minima necessitatibus, est, porro tempora fugit distinctio
               </div>
             </div>
           </div>
-        </section>
-        <!------------------------------ in anination JS-------------------------------- -->
-        <!------------------------------ mobile end------------------------------- -->
+        </span-1>
+        <!------------------------------ mobilesaction for 300px to 1024px  resolutions------------------------------- -->
+      </div>
+      <!-- padding div -->
+      <!------------------------------ mobilesaction for 1024px to bigger sactions ------------------------------- -->
+      <span-2>
+        <saction class="first-container">
+          <div class="paragraph">
+            <div class="paragraph-inner">
+              <h2>Slid Name</h2>
+              <p id="p1">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Deleniti cupiditate quos officiis pariatur illo blanditiis
+                molestiae fugit odit dolore mollitia iste distinctio corporis
+                eius, ea assumenda quas nam, odio vel qui omnis architecto
+                expedita? Atque voluptate expedita quisquam culpa magnam veniam
+                ea in. Molestias eum modi excepturi fugit sit, perspiciatis sint
+                voluptates accusantium obcaecati dolorum necessitatibus
+                provident numquam atque recusandae illo. Molestias tenetur
+                suscipit aspernatur cumque aut exercitationem necessitatibus
+                commodi iure obcaecati? Ad distinctio nam, inventore nostrum
+                dolorem expedita saepe provident molestias, officiis
+                perspiciatis sint rerum. Culpa, ipsum molestias voluptas ad
+                expedita. Ad atque possimus, sequi exercitationem impedit
+              </p>
+            </div>
+            <div class="paragraph-inner">
+              <h2>Slid Name</h2>
+              <p id="p2">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Deleniti cupiditate quos officiis pariatur illo blanditiis
+                molestiae fugit odit dolore mollitia iste distinctio corporis
+                eius, ea assumenda quas nam, odio vel qui omnis architecto
+                expedita? Atque voluptate expedita quisquam culpa magnam veniam
+                ea in. Molestias eum modi excepturi fugit sit, perspiciatis sint
+                voluptates accusantium obcaecati dolorum necessitatibus
+                provident numquam atque recusandae illo. Molestias tenetur
+                suscipit aspernatur cumque aut exercitationem necessitatibus
+                commodi iure obcaecati? Ad distinctio nam, inventore nostrum
+                dolorem expedita saepe provident molestias, officiis
+                perspiciatis sint rerum. Culpa, ipsum molestias voluptas ad
+                expedita. Ad atque possimus, sequi exercitationem impedit
+              </p>
+            </div>
+            <div class="paragraph-inner">
+              <h2>Slid Name</h2>
+              <p id="p3">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Deleniti cupiditate quos officiis pariatur illo blanditiis
+                molestiae fugit odit dolore mollitia iste distinctio corporis
+                eius, ea assumenda quas nam, odio vel qui omnis architecto
+                expedita? Atque voluptate expedita quisquam culpa magnam veniam
+                ea in. Molestias eum modi excepturi fugit sit, perspiciatis sint
+                voluptates accusantium obcaecati dolorum necessitatibus
+                provident numquam atque recusandae illo. Molestias tenetur
+                suscipit aspernatur cumque aut exercitationem necessitatibus
+                commodi iure obcaecati? Ad distinctio nam, inventore nostrum
+                dolorem expedita saepe provident molestias, officiis
+                perspiciatis sint rerum. Culpa, ipsum molestias voluptas ad
+                expedita. Ad atque possimus, sequi exercitationem impedit
+              </p>
+            </div>
+            <div class="paragraph-inner">
+              <h2>Slid Name</h2>
+              <p id="p4">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Deleniti cupiditate quos officiis pariatur illo blanditiis
+                molestiae fugit odit dolore mollitia iste distinctio corporis
+                eius, ea assumenda quas nam, odio vel qui omnis architecto
+                expedita? Atque voluptate expedita quisquam culpa magnam veniam
+                ea in. Molestias eum modi excepturi fugit sit, perspiciatis sint
+                voluptates accusantium obcaecati dolorum necessitatibus
+                provident numquam atque recusandae illo. Molestias tenetur
+                suscipit aspernatur cumque aut exercitationem necessitatibus
+                commodi iure obcaecati? Ad distinctio nam, inventore nostrum
+                dolorem expedita saepe provident molestias, officiis
+                perspiciatis sint rerum. Culpa, ipsum molestias voluptas ad
+                expedita. Ad atque possimus, sequi exercitationem impedit
+              </p>
+            </div>
+            <div class="paragraph-inner">
+              <h2>Slid Name</h2>
+              <p id="p5">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Deleniti cupiditate quos officiis pariatur illo blanditiis
+                molestiae fugit odit dolore mollitia iste distinctio corporis
+                eius, ea assumenda quas nam, odio vel qui omnis architecto
+                expedita? Atque voluptate expedita quisquam culpa magnam veniam
+                ea in. Molestias eum modi excepturi fugit sit, perspiciatis sint
+                voluptates accusantium obcaecati dolorum necessitatibus
+                provident numquam atque recusandae illo. Molestias tenetur
+                suscipit aspernatur cumque aut exercitationem necessitatibus
+                commodi iure obcaecati? Ad distinctio nam, inventore nostrum
+                dolorem expedita saepe provident molestias, officiis
+                perspiciatis sint rerum. Culpa, ipsum molestias voluptas ad
+                expedita. Ad atque possimus, sequi exercitationem impedit
+              </p>
+            </div>
+            <div class="paragraph-inner">
+              <h2>Slid Name</h2>
+              <p id="p6">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Deleniti cupiditate quos officiis pariatur illo blanditiis
+                molestiae fugit odit dolore mollitia iste distinctio corporis
+                eius, ea assumenda quas nam, odio vel qui omnis architecto
+                expedita? Atque voluptate expedita quisquam culpa magnam veniam
+                ea in. Molestias eum modi excepturi fugit sit, perspiciatis sint
+                voluptates accusantium obcaecati dolorum necessitatibus
+                provident numquam atque recusandae illo. Molestias tenetur
+                suscipit aspernatur cumque aut exercitationem necessitatibus
+                commodi iure obcaecati? Ad distinctio nam, inventore nostrum
+                dolorem expedita saepe provident molestias, officiis
+                perspiciatis sint rerum. Culpa, ipsum molestias voluptas ad
+                expedita. Ad atque possimus, sequi exercitationem impedit
+              </p>
+            </div>
+          </div>
+          <div class="mobile-container">
+            <div class="mobile-wrap">
+              <img src="images/Mobile Ui.png" alt="" />
+              <div class="ui" id="ui">
+                <div class="ui-images" style="display: block" id="n1">
+                  <img src="ui/1.jpg" alt="" />
+                </div>
+                <div class="ui-images" id="n2">
+                  <img src="ui/2.jpg" alt="" />
+                </div>
+                <div class="ui-images" id="n3">
+                  <img src="ui/03.png" alt="" />
+                </div>
+                <div class="ui-images" id="n4">
+                  <img src="ui/4.png" alt="" />
+                </div>
+                <div class="ui-images" id="n5">
+                  <img src="ui/5.png" alt="" />
+                </div>
+                <div class="ui-images" id="n6">
+                  <img src="ui/6.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </saction>
+      </span-2>
+      <!------------------------------ mobilesaction for 1024px to bigger sactions ------------------------------- -->
+      <div class="padding">
+        <!-- padding div -->
         <!----------------------------- /* parsentage start*/ ----------------------->
         <section>
           <div class="circle-section" id="counter">
@@ -557,20 +748,32 @@
             </div>
           </div>
         </section>
+
         <!----------------------------------- /* parsentage end*/ ----------------------------->
         <!----------------------------------- /*social container*/ ----------------------------->
         <section>
+          <div class="Most-Asked-Questions-heading">
+            <h1>Most Asked Questions</h1>
+          </div>
           <div class="Most-asked-questions-wrap">
             <div class="Most-asked-questions">
               <div class="Most-asked-questions-box">
-                <div class="Most-asked-questions-box-container" style="height: 15rem;" id="Most-asked-questions-box-container1">
+                <div
+                  class="Most-asked-questions-box-container"
+                  style="height: 15rem"
+                  id="Most-asked-questions-box-container1"
+                >
                   <div class="Most-asked-questions-box-heading">
                     <h1>Question</h1>
-                    <div onclick="ArrowClick(0)"  class="arrow-background"  >
-                      <i class="fa-solid fa-angle-down " id="arrowbtn1"></i>
+                    <div onclick="ArrowClick(0)" class="arrow-background">
+                      <i class="fa-solid fa-angle-down" id="arrowbtn1"></i>
                     </div>
                   </div>
-                  <div class="Most-asked-questions-box-paragraph" style="height: 11rem;" id="Most-asked-questions-box-paragraph1">
+                  <div
+                    class="Most-asked-questions-box-paragraph"
+                    style="height: 11rem"
+                    id="Most-asked-questions-box-paragraph1"
+                  >
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Aliquid deserunt, eveniet, ab ex iure illum voluptates
@@ -579,14 +782,24 @@
                     </p>
                   </div>
                 </div>
-                <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container2">
+                <div
+                  class="Most-asked-questions-box-container"
+                  id="Most-asked-questions-box-container2"
+                >
                   <div class="Most-asked-questions-box-heading">
                     <h1>Question</h1>
-                    <div onclick="ArrowClick(1)"  class="arrow-background" id="arrowbtn2" >
-                      <i class="fa-solid fa-angle-down "></i>
+                    <div
+                      onclick="ArrowClick(1)"
+                      class="arrow-background"
+                      id="arrowbtn2"
+                    >
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
-                  <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph2">
+                  <div
+                    class="Most-asked-questions-box-paragraph"
+                    id="Most-asked-questions-box-paragraph2"
+                  >
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Aliquid deserunt, eveniet, ab ex iure illum voluptates
@@ -597,14 +810,24 @@
                 </div>
               </div>
               <div class="Most-asked-questions-box">
-                <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container3">
+                <div
+                  class="Most-asked-questions-box-container"
+                  id="Most-asked-questions-box-container3"
+                >
                   <div class="Most-asked-questions-box-heading">
                     <h1>Question</h1>
-                    <div onclick="ArrowClick(2)"  class="arrow-background" id="arrowbtn3" >
-                      <i class="fa-solid fa-angle-down  "></i>
+                    <div
+                      onclick="ArrowClick(2)"
+                      class="arrow-background"
+                      id="arrowbtn3"
+                    >
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
-                  <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph3">
+                  <div
+                    class="Most-asked-questions-box-paragraph"
+                    id="Most-asked-questions-box-paragraph3"
+                  >
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Aliquid deserunt, eveniet, ab ex iure illum voluptates
@@ -613,14 +836,24 @@
                     </p>
                   </div>
                 </div>
-                <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container4">
+                <div
+                  class="Most-asked-questions-box-container"
+                  id="Most-asked-questions-box-container4"
+                >
                   <div class="Most-asked-questions-box-heading">
                     <h1>Question</h1>
-                    <div onclick="ArrowClick(3)"  class="arrow-background" id="arrowbtn4" >
-                      <i class="fa-solid fa-angle-down "></i>
+                    <div
+                      onclick="ArrowClick(3)"
+                      class="arrow-background"
+                      id="arrowbtn4"
+                    >
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
-                  <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph4">
+                  <div
+                    class="Most-asked-questions-box-paragraph"
+                    id="Most-asked-questions-box-paragraph4"
+                  >
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Aliquid deserunt, eveniet, ab ex iure illum voluptates
@@ -633,14 +866,20 @@
             </div>
             <div class="Most-asked-questions">
               <div class="Most-asked-questions-box">
-                <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container5">
+                <div
+                  class="Most-asked-questions-box-container"
+                  id="Most-asked-questions-box-container5"
+                >
                   <div class="Most-asked-questions-box-heading">
                     <h1>Question</h1>
-                    <div onclick="ArrowClick(4)"  class="arrow-background"  >
-                      <i class="fa-solid fa-angle-down " id="arrowbtn5"></i>
+                    <div onclick="ArrowClick(4)" class="arrow-background">
+                      <i class="fa-solid fa-angle-down" id="arrowbtn5"></i>
                     </div>
                   </div>
-                  <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph5">
+                  <div
+                    class="Most-asked-questions-box-paragraph"
+                    id="Most-asked-questions-box-paragraph5"
+                  >
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Aliquid deserunt, eveniet, ab ex iure illum voluptates
@@ -649,14 +888,26 @@
                     </p>
                   </div>
                 </div>
-                <div class="Most-asked-questions-box-container"  style="height: 15rem;"  id="Most-asked-questions-box-container6">
+                <div
+                  class="Most-asked-questions-box-container"
+                  style="height: 15rem"
+                  id="Most-asked-questions-box-container6"
+                >
                   <div class="Most-asked-questions-box-heading">
                     <h1>Question</h1>
-                    <div onclick="ArrowClick(5)"  class="arrow-background" id="arrowbtn6" >
-                      <i class="fa-solid fa-angle-down "></i>
+                    <div
+                      onclick="ArrowClick(5)"
+                      class="arrow-background"
+                      id="arrowbtn6"
+                    >
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
-                  <div class="Most-asked-questions-box-paragraph" style="height: 11rem;" id="Most-asked-questions-box-paragraph6">
+                  <div
+                    class="Most-asked-questions-box-paragraph"
+                    style="height: 11rem"
+                    id="Most-asked-questions-box-paragraph6"
+                  >
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Aliquid deserunt, eveniet, ab ex iure illum voluptates
@@ -667,14 +918,24 @@
                 </div>
               </div>
               <div class="Most-asked-questions-box">
-                <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container7">
+                <div
+                  class="Most-asked-questions-box-container"
+                  id="Most-asked-questions-box-container7"
+                >
                   <div class="Most-asked-questions-box-heading">
                     <h1>Question</h1>
-                    <div onclick="ArrowClick(6)"  class="arrow-background" id="arrowbtn7" >
-                      <i class="fa-solid fa-angle-down  "></i>
+                    <div
+                      onclick="ArrowClick(6)"
+                      class="arrow-background"
+                      id="arrowbtn7"
+                    >
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
-                  <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph7">
+                  <div
+                    class="Most-asked-questions-box-paragraph"
+                    id="Most-asked-questions-box-paragraph7"
+                  >
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Aliquid deserunt, eveniet, ab ex iure illum voluptates
@@ -683,14 +944,24 @@
                     </p>
                   </div>
                 </div>
-                <div class="Most-asked-questions-box-container" id="Most-asked-questions-box-container8">
+                <div
+                  class="Most-asked-questions-box-container"
+                  id="Most-asked-questions-box-container8"
+                >
                   <div class="Most-asked-questions-box-heading">
                     <h1>Question</h1>
-                    <div onclick="ArrowClick(7)"  class="arrow-background" id="arrowbtn8" >
-                      <i class="fa-solid fa-angle-down "></i>
+                    <div
+                      onclick="ArrowClick(7)"
+                      class="arrow-background"
+                      id="arrowbtn8"
+                    >
+                      <i class="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
-                  <div class="Most-asked-questions-box-paragraph" id="Most-asked-questions-box-paragraph8">
+                  <div
+                    class="Most-asked-questions-box-paragraph"
+                    id="Most-asked-questions-box-paragraph8"
+                  >
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Aliquid deserunt, eveniet, ab ex iure illum voluptates
@@ -703,6 +974,7 @@
             </div>
           </div>
         </section>
+
         <!----------------------------------- /*social container*/ ----------------------------->
         <!----------------------------------- Why-Test-n-Track ------------------------->
         <section class="Why-Test-n-Track">
@@ -716,9 +988,9 @@
           <div class="box-container" id="boxes"></div>
           <!--in animation JS -->
         </section>
+
         <!--------------------------------- Why-Test-n-Track end ------------------->
         <!--------------------------------- form start--------------------------------- -->
-
         <section class="form-outer">
           <form>
             <div class="form-wrap">
@@ -741,6 +1013,7 @@
                 </select>
               </div>
               <textarea
+                style="resize: none"
                 id="message"
                 cols="30"
                 rows="10"
@@ -758,6 +1031,7 @@
           </form>
           <!-- -----------------------------------------------------form end ------------------->
         </section>
+
         <!------------------------- site padding div------------------ -->
       </div>
       <!------------------------- site padding div------------------ -->
@@ -770,6 +1044,7 @@
           </button>
         </div>
       </section>
+
       <!------------------------- priceing end ------------------------------------->
       <footer>
         <div class="footer-tile">
@@ -780,7 +1055,7 @@
             <p>
               Lorem ipsum dolor sit consectetur, adipisicing elit. Pariatur eos
               nostrum
-              <span
+              <span-0
                 >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Repellat in laboriosam consequuntur tenetur, odio distinctio
                 doloribus aperiam hic doloremque dolorum, molestias aliquam quam
@@ -788,7 +1063,7 @@
                 reiciendis saepe vero adipisci ut nisi, dignissimos, neque alias
                 culpa odio veniam officiis cupiditate. Laudantium natus, ab
                 expedita quibusdam dolorum dicta harum impedit sunt praesentium
-                dolorem pariatur velit tempore quaerat</span
+                dolorem pariatur velit tempore quaerat</span-0
               >
             </p>
           </div>
@@ -847,6 +1122,9 @@
       </footer>
     </div>
     <script src="js fils/website.js"></script>
+    <script src="js fils/mobile.js"></script>
+    <script src="js fils/type-writer.js"></script>
+    <!-- <script src="js fils/chatbot-animation.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
