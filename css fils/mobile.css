@@ -17,7 +17,8 @@
     .mobile-saction-for-300-inner{
         width: 100%;
         height: 32rem;
-        display: grid;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -32,6 +33,7 @@
     .mobile-saction-for-300-inner-images img{
         width: 8rem;
         height: 15rem;
+        margin-bottom: 2rem
     }
 
     .mobile-saction-for-300-inner-paragraph{
@@ -40,11 +42,95 @@
         text-align: center;
         color: white;
         font-size: 12px;
+        padding: 0rem 2rem;
     }
 
 }
 
+@media screen and (min-width:600px) {
+    
+    .mobile-saction-for-300{
+        width: 100%;
+        height: 190rem;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mobile-saction-for-300-inner{
+        width: 100%;
+        height: 27rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .mobile-saction-for-300-inner-images{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .mobile-saction-for-300-inner-images img{
+        width: 8rem;
+        height: 15rem;
+        margin-bottom: 2rem
+    }
+
+    .mobile-saction-for-300-inner-paragraph{
+        width: 100%;
+        height: 10rem;
+        text-align: center;
+        color: white;
+        font-size: 12px;
+        padding: 0rem 4rem;
+    }
+
+}
+
+@media screen and (min-width:800px) {
+    
+    .mobile-saction-for-300{
+        width: 100%;
+        height: 210rem;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .mobile-saction-for-300-inner{
+        width: 100%;
+        height: 32rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-saction-for-300-inner-images{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .mobile-saction-for-300-inner-images img{
+        width: 8rem;
+        height: 15rem;
+        margin-bottom: 2rem
+    }
+
+    .mobile-saction-for-300-inner-paragraph{
+        width: 100%;
+        height: 10rem;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+        padding: 0rem 6rem;
+    }
+
+}
 
 @media screen and (min-width:1024px) {
        

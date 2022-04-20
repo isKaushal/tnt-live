@@ -10,27 +10,20 @@
     --clr-circle: rgb(255, 94, 0);
     --clr-boxes: rgba(255, 255, 255, 0.109);
     --clr-text: rgb(255, 255, 255);
-    --clr-dot1: rgba(255, 2, 2, 0.564);
-    --clr-dot2: rgba(255, 60, 0, 0.516);
-    --clr-dot3: rgba(255, 0, 119, 0.518);
-    --clr-dot4: rgba(0, 255, 21, 0.552);
-    --clr-dot5: rgba(0, 217, 255, 0.566);
-    --clr-dot6: rgba(0, 255, 136, 0.566);
-    --clr-dot7: rgba(255, 230, 0, 0.493);
-    --clr-dot8: rgba(166, 255, 0, 0.566);
-    --clr-dot9: rgba(132, 0, 255, 0.566);
-    --clr-dot10: rgba(255, 0, 76, 0.566);
+    --clr-dot1: rgb(255, 2, 2);
+    --clr-dot2: rgb(255, 60, 0);
+    --clr-dot3: rgb(255, 0, 119);
+    --clr-dot4: rgb(0, 255, 21);
+    --clr-dot5: rgb(0, 217, 255);
+    --clr-dot6: rgb(0, 255, 136);
+    --clr-dot7: rgb(255, 230, 0);
+    --clr-dot8: rgb(166, 255, 0);
+    --clr-dot9: rgb(132, 0, 255);
+    --clr-dot10: rgb(255, 0, 76);
 }
 
 body {
-    background-color: none;
     overflow-x: hidden;
-}
-
-#ani {
-    position: absolute;
-    width: 100vw;
-    height: 455rem;
 }
 
 @keyframes rotate {
@@ -133,6 +126,138 @@ body {
     animation: animate1 60s reverse infinite;
     background-color: var(--clr-dot8);
 }
+.dot9 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    animation-delay: 5s;
+    animation: animate2 60s forwards infinite;
+    background-color: var(--clr-dot9);
+}
+.dot10 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    animation-delay: 5s;
+    animation: animate3 60s forwards infinite;
+    background-color: var(--clr-dot10);
+}
+.dot11 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    animation-delay: 5s;
+    animation: animate4 60s forwards infinite;
+    background-color: var(--clr-dot2);
+}
+.dot12 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    animation-delay: 5s;
+    animation: animate1 60s forwards infinite;
+    background-color: var(--clr-dot1);
+}
+.dot13 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    animation-delay: 5s;
+    animation: animate2 60s forwards infinite;
+    background-color: var(--clr-dot3);
+}
+.dot14 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    animation-delay: 5s;
+    animation: animate3 60s forwards infinite;
+    background-color: var(--clr-dot4);
+}
+.dot15 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    animation-delay: 5s;
+    animation: animate4 60s forwards infinite;
+    background-color: var(--clr-dot5);
+}
+.dot16 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    animation-delay: 5s;
+    animation: animate1 60s reverse infinite;
+    background-color: var(--clr-dot6);
+}
+.dot17 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    animation-delay: 5s;
+    animation: animate2 60s reverse infinite;
+    background-color: var(--clr-dot7);
+}
+.dot18 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    animation-delay: 5s;
+    animation: animate3 60s reverse infinite;
+    background-color: var(--clr-dot8);
+}
+.dot19 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    animation-delay: 5s;
+    animation: animate4 60s reverse infinite;
+    background-color: var(--clr-dot9);
+}
+.dot20 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    animation-delay: 5s;
+    animation: animate1 60s reverse infinite;
+    background-color: var(--clr-dot10);
+}
 
 /* animation keyframes stars */
 
@@ -205,12 +330,12 @@ body {
     #ani {
         position: absolute;
         width: 100vw;
-        height: 452rem;
+        height: 788rem;
     }
 
     #main {
         width: 100vw;
-        height: 452rem;
+        height: 788rem;
         position: absolute;
         overflow: hidden;
         z-index: -10;
@@ -332,6 +457,17 @@ body {
 
     .corner-circle11 {
         top: 96%;
+        left: 60%;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle12 {
+        top: 92%;
         left: -35%;
         position: absolute;
         width: 300px;
@@ -341,18 +477,20 @@ body {
         animation: rotate 10s linear infinite;
     }
 
+   
+
 }
 
 @media screen and (min-width: 600px) {/*  for mobile land scape */
     #ani {
         position: absolute;
         width: 100vw;
-        height: 569rem;
+        height: 795rem;
     }
 
     #main {
         width: 100vw;
-        height: 569rem;
+        height: 795rem;
         position: absolute;
         overflow: hidden;
         z-index: -10;
@@ -501,12 +639,12 @@ body {
     #ani {
         position: absolute;
         width: 100vw;
-        height: 477rem;
+        height: 777rem;
     }
 
     #main {
         width: 100vw;
-        height: 477rem;
+        height: 777rem;
         position: absolute;
         overflow: hidden;
         z-index: -10;
@@ -654,12 +792,12 @@ body {
     #ani {
         position: absolute;
         width: 100vw;
-        height: 351rem;
+        height: 669rem;
     }
 
     #main {
         width: 100vw;
-        height: 351rem;
+        height: 669rem;
         position: absolute;
         overflow: hidden;
         z-index: -10;
@@ -791,6 +929,28 @@ body {
         animation: rotate 10s linear infinite;
     }
 
+    .corner-circle13 {
+        top: 80%;
+        left: 60%;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle14 {
+        top: 96%;
+        left: -35%;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
     .boxes {
         margin: 2.5rem;
         width: 15rem;
@@ -808,12 +968,12 @@ body {
     #ani {
         position: absolute;
         width: 100vw;
-        height: 453rem;
+        height: 712rem;
     }
 
     #main {
         width: 100vw;
-        height: 453rem;
+        height: 712rem;
         position: absolute;
         overflow: hidden;
         z-index: -10;
@@ -944,6 +1104,27 @@ body {
         background: linear-gradient(red, rgb(255, 123, 0));
         animation: rotate 10s linear infinite;
     }
+    .corner-circle13 {
+        top: 80%;
+        left: 60%;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle14 {
+        top: 96%;
+        left: -35%;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
 
     .boxes {
         margin: 2.5rem;
@@ -956,7 +1137,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1580px) {/*  for mac or not*/
+@media screen and (min-width: 1580px) {/*  for pc bigger resoluton*/
     #ani {
         position: absolute;
         width: 100vw;
@@ -965,7 +1146,7 @@ body {
 
     #main {
         width: 100vw;
-        height: 453rem;
+        height: 701rem;
         position: absolute;
         overflow: hidden;
         z-index: -10;
@@ -1095,6 +1276,182 @@ body {
         border-radius: 50%;
         background: linear-gradient(red, rgb(255, 123, 0));
         animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle13 {
+        top: 0%;
+        left: 60%;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: animate1 50s forwards infinite;
+
+    }
+
+    .boxes {
+        margin: 2.5rem;
+        width: 15rem;
+        height: 10rem;
+        border-radius: 20px;
+        background-color: var(--clr-boxes);
+        box-shadow: 10px 15px 55px;
+        backdrop-filter: blur(10px);
+    }
+}
+
+@media screen and (min-width: 1878px) {/*  for pc bigger resoluton*/
+    #ani {
+        position: absolute;
+        width: 100vw;
+        height: 453rem;
+    }
+
+    #main {
+        width: 100vw;
+        height: 763rem;
+        position: absolute;
+        overflow: hidden;
+        z-index: -10;
+    }
+
+
+    .container {
+        z-index: -10;
+    }
+
+    .corner-circle1 {
+        top: -5%;
+        left: -17%;
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle2 {
+        top: 8%;
+        left: 70%;
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle3 {
+        top: 20%;
+        left: -30%;
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle4 {
+        top: 28%;
+        left: 70%;
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle5 {
+        top: 37%;
+        left: -30%;
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle6 {
+        top: 46%;
+        left: 70%;
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle7 {
+        top: 56%;
+        left: -30%;
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle8 {
+        top: 66%;
+        left: 70%;
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle9 {
+        top: 76%;
+        left: -30%;
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle10 {
+        top: 86%;
+        left: 70%;
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle11 {
+        top: 96%;
+        left: -30%;
+        position: absolute;
+        width: 900px;
+        height: 900px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: rotate 10s linear infinite;
+    }
+
+    .corner-circle13 {
+        top: 0%;
+        left: 60%;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: linear-gradient(red, rgb(255, 123, 0));
+        animation: animate1 50s forwards infinite;
+
     }
 
     .boxes {

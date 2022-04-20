@@ -34,6 +34,18 @@ theme.innerHTML = `
     <div class="dot6"></div>
     <div class="dot7"></div>
     <div class="dot8"></div>
+    <div class="dot9"></div>
+    <div class="dot10"></div>
+    <div class="dot11"></div>
+    <div class="dot12"></div>
+    <div class="dot13"></div>
+    <div class="dot14"></div>
+    <div class="dot15"></div>
+    <div class="dot16"></div>
+    <div class="dot17"></div>
+    <div class="dot18"></div>
+    <div class="dot19"></div>
+    <div class="dot20"></div>
   </div>
   <div class="container">
     <div class="corner-circle1"></div>
@@ -47,9 +59,21 @@ theme.innerHTML = `
     <div class="corner-circle9"></div>
     <div class="corner-circle10"></div>
     <div class="corner-circle11"></div>
+    <div class="corner-circle12"></div>
+    <div class="corner-circle13"></div>
+    <div class="corner-circle14"></div>
   </div>`;
 
 // ------------------------background theme---------------------------//
+// ------------------------Awards saction---------------------------//
+
+let image = document.getElementById("awards-images");
+
+setTimeout(() => {
+    image.style.display = "flex"
+}, 3500);
+
+// ------------------------Awards saction---------------------------//
 // ------------------------FIRST IMAGE ANINATION START---------------------------//
 
 
