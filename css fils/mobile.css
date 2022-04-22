@@ -140,10 +140,10 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        padding: 0rem 2rem;
     }
 
     .paragraph{
+        font-size: 10px;
         margin: 0%;
         padding: 0%;
         width: 60%;
@@ -227,7 +227,6 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        padding: 0rem 5rem ;
     }
 
     .paragraph{
@@ -315,7 +314,6 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        padding: 0rem 10rem ;
     }
 
     .paragraph{
@@ -403,7 +401,6 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        padding: 0rem 15rem ;
     }
 
     .paragraph{
@@ -495,7 +492,6 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        padding: 0rem 15rem ;
     }
 
     .paragraph{
@@ -587,7 +583,6 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        padding: 0rem 15rem ;
     }
 
     .paragraph{
@@ -669,3 +664,5 @@
     }
 
 }
+
+

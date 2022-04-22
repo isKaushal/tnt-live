@@ -1,22 +1,38 @@
+// ---------------------------Header class toggle-------------------//
+
+let header = document.getElementById("header")
+let Empty = document.getElementById("Empty")
+  
+
+  window.addEventListener("scroll",()=>{
+    if (window.pageYOffset > 100) {
+      header.classList.add("color");
+    }else{
+      header.classList.remove("color");
+    }
+  })
+
+  // ---------------------------Header class toggle-------------------//
+// ------------------------header ul end---------------------------//
 // ------------------------preloder html---------------------------//
 
 let preloder  = document.getElementById("preloder-container-wrap");
 
 preloder.innerHTML = `
-<div class="preloder-container">
-<div class="second-container">
-  <div class="first-icon">
-    <div class="first-icon-inner">
-      <div class="first-icon-inner-cut"></div>
+  <div class="preloder-container">
+  <div class="second-container">
+    <div class="first-icon">
+      <div class="first-icon-inner">
+        <div class="first-icon-inner-cut"></div>
+      </div>
+    </div>
+    <div class="second-icon">
+      <div class="second-icon-inner">
+        <div class="second-icon-inner-cut"></div>
+      </div>
     </div>
   </div>
-  <div class="second-icon">
-    <div class="second-icon-inner">
-      <div class="second-icon-inner-cut"></div>
-    </div>
   </div>
-</div>
-</div>
 `
 
 
@@ -70,29 +86,10 @@ theme.innerHTML = `
 let image = document.getElementById("awards-images");
 
 setTimeout(() => {
-    image.style.display = "flex"
+  image.style.display = "flex"
 }, 3500);
 
 // ------------------------Awards saction---------------------------//
-// ------------------------FIRST IMAGE ANINATION START---------------------------//
-
-
-gsap.timeline({repeat:-1})
-
-  .from('#mac2',{y:22,duration:0.8,opacity:0})
-  .from('#mac1',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(2)"},'<')
-  .from('#mac3',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(2)"},'<')
-  .from('#mac4',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(2)"},'<')
-  .from('#logo-left',{delay:2,display:"flex"})
-
-
-  .from('#tab1',{y:22,duration:0.8,opacity:0})
-  .from('#tab2',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(2)"},'<')
-  .from('#tab3',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(2)"},'<')
-  .from('#tab4',{y:20,delay:0.2,duration:0.8,opacity:0,ease: "back.out(2)"},'<')
-  .from('#logo-left2',{delay:2,display:"flex"})
-
-//---------------------------------- FIRST IMAGE ANINATION END------------------------------------//
 //---------------------------------- IS IN VIEW PORT FUNCTON START------------------------------------//
 
 const Box = document.getElementById("box");
@@ -210,55 +207,8 @@ document.addEventListener('scroll', () =>  {
     passive: true
 });
 
-// ------------------------IS IN VIEW PORT FUNCTON END--------------------//
-//------------------------ FEATURS ANINMATION ---------------------//
-// let toggle = document.getElementById("toggle");
-
-// gsap.registerPlugin(ScrollTrigger)
-// const tl = gsap.timeline({
-//   repeat:-1,
-//   scrollTrigger:{
-//     trigger:"#gif",
-    
-//   }
-// });
-
-// // gsap.timeline({repeat:-1,delay:5})
-// tl.from('#image2',{x:-100,duration:2,opacity:0})
-//   .from('#paragraph2',{x:100,duration:2,opacity:0},'<')
-//   .from('#image2',{x:0,delay:6,duration:1.5,opacity:1})
-//   .from('#paragraph2',{x:-0,duration:1.5,opacity:1},'<')
-//   .from('#changer2',{display:"flex"})
-
-//   .from('#image3',{x:100,duration:2,opacity:0})
-//   .from('#paragraph3',{x:-100,duration:2,opacity:0},'<')
-//   .from('#image3',{x:-0,delay:6,duration:1.5,opacity:1})
-//   .from('#paragraph3',{x:0,duration:1.5,opacity:1},'<')
-//   .from('#changer3',{display:"flex"})
-
-//   .from('#image4',{x:-100,duration:2,opacity:0})
-//   .from('#paragraph4',{x:100,duration:2,opacity:0},'<')
-//   .from('#image4',{x:0,delay:6,duration:1.5,opacity:1})
-//   .from('#paragraph4',{x:-0,duration:1.5,opacity:1},'<')
-//   .from('#changer4',{display:"flex"})
-
-//   .from('#image5',{x:100,duration:2,opacity:0})
-//   .from('#paragraph5',{x:-100,duration:2,opacity:0},'<')
-//   .from('#image5',{x:-0,delay:6,duration:1.5,opacity:1})
-//   .from('#paragraph5',{x:0,duration:1.5,opacity:1},'<')
-//   .from('#changer5',{display:"flex"})
-
-//   .from('#image6',{x:-100,duration:2,opacity:0})
-//   .from('#paragraph6',{x:100,duration:2,opacity:0},'<')
-//   .from('#image6',{x:0,delay:6,duration:1.5,opacity:1})
-//   .from('#paragraph6',{x:-0,duration:1.5,opacity:1},'<')
-//   .from('#changer6',{display:"flex"})
-
-// tl.restart();  
-
 
 // --------------------------PERCENTAGE SCROLL TRIGGER--------------------------//
-
 // --------------------------FIRST 80% CIRCLE-----------------------------------//
 
 let section1 = document.getElementById("section1");
