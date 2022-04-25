@@ -73,6 +73,10 @@ body {
   cursor: pointer;
 }
 
+.chat-bot-button.hide{
+  opacity: 0;
+}
+
 .chat-bot-button i{
   color: white;
   font-size: 25px;
@@ -8772,80 +8776,6 @@ body {
 
   /* for hide items  */
   
-      
-  header{
-    position: sticky;
-    top: 0%;
-    height: 80px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0rem 3rem ;
-    z-index: 10;
-  }
-
-  header .logo{
-    display: flex;
-    align-items: center;
-    width:50%;
-    height: 80px;
-  }
-
-  header .logo img{
-    width: 50px;
-    height: auto;
-  }
-
-  header ul {
-    font-size: 18px;
-    list-style: none;
-    display: flex;
-  }
-
-  header ul img{
-    display: none;
-  }
-
-  header ul li{
-    margin: 0px 5px;
-    width: 7rem;
-    height: 2rem;
-    border-radius: 10px;
-    display: flex;
-    transition: 0.7s ease-in-out;
-    justify-content: center;
-    align-items: center;
-  }
-
-  header ul li a{
-    transition: 0.7s ease-in-out;
-  }
-
-  header ul li.active{
-    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0,0.515) ,-1px -1px 12px 0px  rgba(0, 0, 0,0.515);
-  }
-
-  header ul li:hover{
-    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0,0.515) ,-1px -1px 12px 0px  rgba(0, 0, 0,0.515);
-  }
-
-  header ul li a{
-    color: var(--text-clr);
-    text-decoration: none;
-  }
-
-  header .menu-btn i{
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
-  }
-  #click{
-    display: none;
-  }
-
-
   /* content div  starts*/
   .content {
     width: 100vw;
@@ -9444,6 +9374,15 @@ body {
   /* technologies saction complete */
  
   /* container start*/
+  
+  .Most-Asked-Questions-heading{
+    margin-bottom: 2rem;
+
+  }
+
+  .Most-Asked-Questions-heading h1{
+    font-size: 50px;
+  }
 
   .Most-asked-questions-wrap {
     width: 100%;
@@ -9925,79 +9864,6 @@ body {
   /* for hide items  */
 
       
-  header{
-    position: sticky;
-    top: 0%;
-    height: 80px;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0rem 3rem ;
-    z-index: 10;
-  }
-
-  header .logo{
-    display: flex;
-    align-items: center;
-    width:50%;
-    height: 80px;
-  }
-
-  header .logo img{
-    width: 50px;
-    height: auto;
-  }
-
-  header ul {
-    font-size: 18px;
-    list-style: none;
-    display: flex;
-  }
-
-  header ul img{
-    display: none;
-  }
-
-  header ul li{
-    margin: 0px 5px;
-    width: 7rem;
-    height: 2rem;
-    border-radius: 10px;
-    display: flex;
-    transition: 0.7s ease-in-out;
-    justify-content: center;
-    align-items: center;
-  }
-
-  header ul li a{
-    transition: 0.7s ease-in-out;
-  }
-
-  header ul li.active{
-    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0,0.515) ,-1px -1px 12px 0px  rgba(0, 0, 0,0.515);
-  }
-
-  header ul li:hover{
-    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0,0.515) ,-1px -1px 12px 0px  rgba(0, 0, 0,0.515);
-  }
-
-  header ul li a{
-    color: var(--text-clr);
-    text-decoration: none;
-  }
-
-  header .menu-btn i{
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
-  }
-  #click{
-    display: none;
-  }
-
-
   /* content div  starts*/
   .content {
     width: 100vw;
@@ -10008,7 +9874,7 @@ body {
   }
 
   .padding {
-    padding: 0rem 35rem 0rem 35rem;
+    padding: 0rem 30rem 0rem 30rem;
     width: 100%;
   }
 
@@ -10348,7 +10214,7 @@ body {
   }
 
   .our-team-div {
-    width: 12.6vw;
+    width: 14.3vw;
     height: 240px;
     overflow: hidden;
     display: block;
@@ -10391,7 +10257,7 @@ body {
 
   .for-team-members {
     padding: 0px 20px;
-    font-size: 17px;
+    font-size: 19px;
     text-align: center;
     color: var(--image-bg);
   }
@@ -10503,7 +10369,7 @@ body {
   .content-middle-child-three-right p {
     color: var(--text-clr);
     text-align: center;
-    font-size: 13.8px;
+    font-size: 15.5px;
     padding: 0rem 1rem;
   }
 
@@ -10543,7 +10409,7 @@ body {
   .tachnologies-left p {
     color: var(--text-clr);
     text-align: center;
-    font-size: 14px;
+    font-size: 15.5px;
     padding: 0rem 1rem;
   }
 
@@ -10596,6 +10462,16 @@ body {
   /* technologies saction complete */
  
   /* container start*/
+
+  .Most-Asked-Questions-heading{
+    margin-bottom: 2rem;
+    height: max-content;
+
+  }
+
+  .Most-Asked-Questions-heading h1{
+    font-size: 50px;
+  }
 
   .Most-asked-questions-wrap {
     width: 100%;

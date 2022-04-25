@@ -171,7 +171,7 @@
     }
     
     .mobile-container{
-        padding: 8rem 0rem ;
+        padding: 11rem 0rem 8rem 0rem;
         width: 40%;
         height: 600vh;
     }
@@ -259,7 +259,7 @@
     
     
     .mobile-container{
-        padding: 8rem 0rem ;
+        padding: 11rem 0rem 8rem 0rem;
         width: 40%;
         height: 600vh;
     }
@@ -346,7 +346,7 @@
     
 
     .mobile-container{
-        padding: 8rem 0rem ;
+        padding: 12rem 0rem 9rem 0rem;
         width: 40%;
         height: 600vh;
     }
@@ -432,11 +432,11 @@
     }
     
     .paragraph-inner > p{
-        font-size: 15px;
+        font-size: 13px;
     }
     
     .mobile-container{
-        padding: 15rem 0rem ;
+        padding: 16rem 0rem 13rem 0rem;
         width: 40%;
         height: 600vh;
     }
@@ -523,11 +523,11 @@
     }
     
     .paragraph-inner > p{
-        font-size: 18px;
+        font-size: 16px;
     }
     
     .mobile-container{
-        padding: 15rem 0rem ;
+        padding: 19rem 0rem 15rem 0rem;
         width: 40%;
         height: 600vh;
     }
@@ -614,11 +614,11 @@
     }
     
     .paragraph-inner > p{
-        font-size: 20px;
+        font-size: 16px;
     }
     
     .mobile-container{
-        padding: 20rem 0rem ;
+        padding: 19rem 0rem 15rem 0rem;
         width: 40%;
         height: 600vh;
     }

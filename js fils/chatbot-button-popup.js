@@ -7,7 +7,6 @@ document.addEventListener("scroll",()=>{
     let value = window.scrollY;
    
     chat.style.marginTop = value - 50 + "px";
-    // container.style.marginTop = value - 50 + "px";
 
 })
 
@@ -20,3 +19,5 @@ chat.addEventListener("click",()=>{
         fadeIn = false;
     }
 })
+
+// chatbot button
