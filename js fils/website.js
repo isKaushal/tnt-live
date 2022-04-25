@@ -1,7 +1,6 @@
 // ---------------------------Header class toggle-------------------//
 
 let header = document.getElementById("header")
-let Empty = document.getElementById("Empty")
   
 
   window.addEventListener("scroll",()=>{
