@@ -4,26 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jsFiles/jquery.convform.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <link
       rel="stylesheet"
+      type="text/css"
+      href="cssFiles/jquery.convform.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
-    <link rel="icon" type="image/x-icon" href="/images/tnt-01.png" />
-    <link rel="stylesheet" type="text/css" href="css fils/all.css" />
-    <link rel="stylesheet" type="text/css" href="css fils/background theme .css"/>
-    <!-- <link rel="stylesheet" type="text/css" href="css fils/preloder.css" /> -->
-    <link rel="stylesheet" type="text/css" href="css fils/chatbot.css" />
-    <link rel="stylesheet" type="text/css" href="css fils/awards.css" />
-    <link rel="stylesheet" type="text/css" href="css fils/header.css" />
-    <link rel="stylesheet" type="text/css" href="css fils/mobile.css" />
-    <link rel="stylesheet" type="text/css" href="css fils/main.css" />
+    <link rel="icon" type="image/x-icon" href="images/tnt-01.png" />
+    <link rel="stylesheet" type="text/css" href="cssFiles/all.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="cssFiles/background theme .css"
+    />
+    <link rel="stylesheet" type="text/css" href="cssFiles/preloder.css" />
+    <link rel="stylesheet" type="text/css" href="cssFiles/chatbot.css" />
+    <link rel="stylesheet" type="text/css" href="cssFiles/awards.css" />
+    <link rel="stylesheet" type="text/css" href="cssFiles/header.css" />
+    <link rel="stylesheet" type="text/css" href="cssFiles/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="cssFiles/main.css" />
     <title>Test-n-Track</title>
   </head>
 
-  <body onload="load()">
+  <body onload="load()" id="body">
     <!-- --------------------------------preloder --------------------------------->
     <div
       style="transition: 1s"
@@ -37,39 +47,23 @@
     <div class="content">
       <header id="header">
         <div class="logo">
-          <img src="images/tnt Shape-01.png" alt=""/>
+          <img src="images/tnt Shape-01.png" alt="" />
         </div>
         <input type="checkbox" id="click" />
         <label for="click" class="menu-btn">
-          <i class="fas fa-bars"></i>
+          <i class="fas fa-bars" id="fas fa-bars"></i>
         </label>
-          <ul id="ul">
-            <label for="click" class="menu-btn">
-              <i class="fa-solid fa-xmark"></i>
-            </label>
-            <img src="images/tnt Shape-01.png" alt=""/>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallary</a></li>
-            <li><a href="#">Services</a></li>
-          </ul>
+        <ul id="ul">
+          <label for="click" class="menu-btn">
+            <i class="fa-solid fa-xmark" id="fa-solid fa-xmark"></i>
+          </label>
+          <img src="images/tnt Shape-01.png" alt="" />
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Gallary</a></li>
+          <li><a href="#">Services</a></li>
+        </ul>
       </header>
-
-      <!-- /* awards saction */ -->
-      <div class="awards">
-        <div class="awards-images" id="awards-images">
-          <img class="award1" src="images/Crozesk(2).png" alt="" />
-          <img class="award2" src="images/Software Suggest.png" alt="" />
-          <img class="award3" src="images/Source forge.png" alt="" />
-        </div>
-        <div
-          class="lottie"
-          data-animation-path="json fils/data.json"
-          data-anim-loop="false"
-          data-name="none"
-        ></div>
-      </div>
-      <!-- /* awards saction */ -->
 
       <!-- /* chat bot ui*/ -->
       <span-2>
@@ -78,6 +72,17 @@
         </div>
       </span-2>
       <!-- /* chat bot ui*/ -->
+      <!-- /* awards saction */ -->
+      <div class="awards">
+        <div class="awards-images" id="awards-images">
+          <img class="award1" src="images/Crozesk(2).png" alt="" />
+          <img class="award2" src="images/Software Suggest.png" alt="" />
+          <img class="award3" src="images/Source forge.png" alt="" />
+        </div>
+        <img class="lottie" src="images/leaf.gif" alt="" />
+      </div>
+      <!-- /* awards saction */ -->
+
       <!-- chat bot container -->
       <span-2>
         <div class="chatbot-container" id="chatbot-container">
@@ -85,8 +90,37 @@
             <h1>HI</h1>
             <h2>Welcome to TestnTrack</h2>
           </div>
-          <div class="chatbot-container-inner-wrap" >
-            <div class="chatbot-container-inner" id="chatbot-container-inner"></div>
+          <div class="chatbot-container-inner-wrap">
+            <div class="chatbot-container-inner" id="chatbot-container-inner">
+              <div id="chat" class="conv-form-wrapper" style="padding: 0%;">
+                <select
+                  name="programmer"
+                  data-conv-question="So, are you a programmer? (this question will fork the conversation based on your answer)"
+                >
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                </select>
+                <div data-conv-fork="programmer">
+                  <div data-conv-case="yes">
+                    <input
+                      style="width:120%;"
+                      type="text"
+                      data-conv-question="A fellow programmer! Cool."
+                      data-no-answer="true"
+                    />
+                  </div>
+                  <div data-conv-case="no">
+                    <select
+                      name="thought"
+                      data-conv-question="Have you ever thought about learning? Programming is fun!"
+                    >
+                      <option value="yes">Yes</option>
+                      <option value="no">No..</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </span-2>
@@ -701,9 +735,9 @@
               <h1>Lorem ipsum dolor</h1>
             </div>
             <div class="Analysis-wrap-outer">
-              <div class="Analysis-wrap" id="section3">
+              <div class="Analysis-wrap">
                 <h2 style="margin-bottom: 1.5rem">Analysis</h2>
-                <div class="section">
+                <div class="section" id="section3">
                   <div class="outer-circle">
                     <div class="inner-circle">
                       <div class="svg">
@@ -722,9 +756,9 @@
                   </h1>
                 </div>
               </div>
-              <div class="Analysis-wrap" id="section2">
+              <div class="Analysis-wrap">
                 <h2 style="margin-bottom: 1.5rem">Analysis</h2>
-                <div class="section">
+                <div class="section" id="section2">
                   <div class="outer-circle">
                     <div class="inner-circle">
                       <div class="svg">
@@ -743,9 +777,9 @@
                   </h1>
                 </div>
               </div>
-              <div class="Analysis-wrap" id="section1">
+              <div class="Analysis-wrap">
                 <h2 style="margin-bottom: 1.5rem">Analysis</h2>
-                <div class="section">
+                <div class="section" id="section1">
                   <div class="outer-circle">
                     <div class="inner-circle">
                       <div class="svg">
@@ -782,9 +816,12 @@
                   style="height: 15rem"
                   id="Most-asked-questions-box-container1"
                 >
-                  <div class="Most-asked-questions-box-heading">
+                  <div
+                    class="Most-asked-questions-box-heading"
+                    onclick="ArrowClick(0)"
+                  >
                     <h1>Question</h1>
-                    <div onclick="ArrowClick(0)" class="arrow-background">
+                    <div class="arrow-background">
                       <i class="fa-solid fa-angle-down" id="arrowbtn1"></i>
                     </div>
                   </div>
@@ -805,13 +842,12 @@
                   class="Most-asked-questions-box-container"
                   id="Most-asked-questions-box-container2"
                 >
-                  <div class="Most-asked-questions-box-heading">
+                  <div
+                    class="Most-asked-questions-box-heading"
+                    onclick="ArrowClick(1)"
+                  >
                     <h1>Question</h1>
-                    <div
-                      onclick="ArrowClick(1)"
-                      class="arrow-background"
-                      id="arrowbtn2"
-                    >
+                    <div class="arrow-background" id="arrowbtn2">
                       <i class="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
@@ -833,13 +869,12 @@
                   class="Most-asked-questions-box-container"
                   id="Most-asked-questions-box-container3"
                 >
-                  <div class="Most-asked-questions-box-heading">
+                  <div
+                    class="Most-asked-questions-box-heading"
+                    onclick="ArrowClick(2)"
+                  >
                     <h1>Question</h1>
-                    <div
-                      onclick="ArrowClick(2)"
-                      class="arrow-background"
-                      id="arrowbtn3"
-                    >
+                    <div class="arrow-background" id="arrowbtn3">
                       <i class="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
@@ -859,13 +894,12 @@
                   class="Most-asked-questions-box-container"
                   id="Most-asked-questions-box-container4"
                 >
-                  <div class="Most-asked-questions-box-heading">
+                  <div
+                    class="Most-asked-questions-box-heading"
+                    onclick="ArrowClick(3)"
+                  >
                     <h1>Question</h1>
-                    <div
-                      onclick="ArrowClick(3)"
-                      class="arrow-background"
-                      id="arrowbtn4"
-                    >
+                    <div class="arrow-background" id="arrowbtn4">
                       <i class="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
@@ -889,9 +923,12 @@
                   class="Most-asked-questions-box-container"
                   id="Most-asked-questions-box-container5"
                 >
-                  <div class="Most-asked-questions-box-heading">
+                  <div
+                    class="Most-asked-questions-box-heading"
+                    onclick="ArrowClick(4)"
+                  >
                     <h1>Question</h1>
-                    <div onclick="ArrowClick(4)" class="arrow-background">
+                    <div class="arrow-background">
                       <i class="fa-solid fa-angle-down" id="arrowbtn5"></i>
                     </div>
                   </div>
@@ -912,13 +949,12 @@
                   style="height: 15rem"
                   id="Most-asked-questions-box-container6"
                 >
-                  <div class="Most-asked-questions-box-heading">
+                  <div
+                    class="Most-asked-questions-box-heading"
+                    onclick="ArrowClick(5)"
+                  >
                     <h1>Question</h1>
-                    <div
-                      onclick="ArrowClick(5)"
-                      class="arrow-background"
-                      id="arrowbtn6"
-                    >
+                    <div class="arrow-background" id="arrowbtn6">
                       <i class="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
@@ -941,13 +977,12 @@
                   class="Most-asked-questions-box-container"
                   id="Most-asked-questions-box-container7"
                 >
-                  <div class="Most-asked-questions-box-heading">
+                  <div
+                    class="Most-asked-questions-box-heading"
+                    onclick="ArrowClick(6)"
+                  >
                     <h1>Question</h1>
-                    <div
-                      onclick="ArrowClick(6)"
-                      class="arrow-background"
-                      id="arrowbtn7"
-                    >
+                    <div class="arrow-background" id="arrowbtn7">
                       <i class="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
@@ -967,13 +1002,12 @@
                   class="Most-asked-questions-box-container"
                   id="Most-asked-questions-box-container8"
                 >
-                  <div class="Most-asked-questions-box-heading">
+                  <div
+                    class="Most-asked-questions-box-heading"
+                    onclick="ArrowClick(7)"
+                  >
                     <h1>Question</h1>
-                    <div
-                      onclick="ArrowClick(7)"
-                      class="arrow-background"
-                      id="arrowbtn8"
-                    >
+                    <div class="arrow-background" id="arrowbtn8">
                       <i class="fa-solid fa-angle-down"></i>
                     </div>
                   </div>
@@ -1011,13 +1045,13 @@
         <!--------------------------------- Why-Test-n-Track end ------------------->
         <!--------------------------------- form start--------------------------------- -->
         <section class="form-outer">
-          <form>
+          <form class="contact-form">
             <div class="form-wrap">
               <div class="input">
-                <input id="name" type="name" placeholder="Name" />
+                <input id="Name" type="text" placeholder="Name" />
               </div>
               <div class="input">
-                <input id="Email" type="Email" placeholder="your Email" />
+                <input id="Email" type="Email" placeholder="Your Email" />
               </div>
               <div class="input">
                 <input id="phone" type="Phone" placeholder="Phone" />
@@ -1039,7 +1073,7 @@
                 placeholder="Your Query ?"
               ></textarea>
               <div class="footer-btn-wrap">
-                <button type="submit" id="send">Send</button>
+                <button onclick="submit" type="submit" id="send">Send</button>
               </div>
             </div>
             <span-2>
@@ -1050,7 +1084,6 @@
           </form>
           <!-- -----------------------------------------------------form end ------------------->
         </section>
-
         <!------------------------- site padding div------------------ -->
       </div>
       <!------------------------- site padding div------------------ -->
@@ -1058,12 +1091,13 @@
       <section class="price">
         <div class="price-inner">
           <p>Download Our Pricing List</p>
-          <button class="price-button" id="price">
+          <!-- <button class="price-button" id="price">
             <a href="temp for download" download="prices.pdf">Download</a>
-          </button>
+            </button> -->
+
+          <div class="demo1"></div>
         </div>
       </section>
-
       <!------------------------- priceing end ------------------------------------->
       <footer>
         <div class="footer-tile">
@@ -1140,12 +1174,13 @@
         </div>
       </footer>
     </div>
-    <script type="text/javascript" src="js fils/website.js"></script>
-    <script type="text/javascript" src="js fils/mobile.js"></script>
-    <script type="text/javascript" src="js fils/type-writer.js"></script>
+    <script type="text/javascript" src="jsFiles/main.js"></script>
+    <script type="text/javascript" src="jsFiles/mobile.js"></script>
+    <script type="text/javascript" src="jsFiles/type-writer.js"></script>
+    <script type="text/javascript" src="jsFiles/form.js"></script>
     <script
       type="text/javascript"
-      src="js fils/chatbot-button-popup.js"
+      src="jsFiles/chatbot-button-popup.js"
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.2/lottie.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -1167,6 +1202,10 @@
       });
 
       // <!------------------------- slider script ------------------------->
+      // <!------------------------- Chat Bot ------------------------->
+
+
+      // <!------------------------- Chat Bot ------------------------->
     </script>
   </body>
 </html>
